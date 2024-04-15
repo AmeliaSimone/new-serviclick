@@ -1,0 +1,28 @@
+@import "../../../styles/mixins.scss";
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding:30px 119px 0 50px ;
+  
+  @include media-xl() {
+    height:100%;
+    width: 100%;
+    padding: 20 50px 0 30;
+  }  
+
+  @include media-lg() {
+    height:100%;
+    width: 100%;
+    padding: 10 40px 0 20;
+  }
+
+      @include media-sm() {
+        padding: 10 20px 0 15 !important;
+      }
+
+
+      
+}
