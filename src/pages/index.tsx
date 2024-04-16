@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import Hero from "@/components/functional/Hero";
 import Score from "@/components/functional/Score";
+import About from "@/components/functional/About";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <Hero/>
         <Score/>
+        <About/>
 
       </main>
     </>
