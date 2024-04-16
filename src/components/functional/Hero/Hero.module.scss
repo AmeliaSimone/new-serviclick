@@ -5,17 +5,17 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 119px 10px 33px;
+  padding:  20px 50px;
 
   @include media-xl() {
-    padding: 40px;
+    padding: 15px 45px;
   }
 
   @include media-lg() {
-    padding: 30px;
+    padding: 15px 40px;
   }
 
   @include media-sm() {
-    padding: 20px;
+    padding: 10px 20px;
   }
 }

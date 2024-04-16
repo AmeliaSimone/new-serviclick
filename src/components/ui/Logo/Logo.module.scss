@@ -1,5 +1,24 @@
 @import "../../../styles/mixins.scss";
 
 .logo{
-   
+    @include media-lg() {
+        display: none;
+      }
+      
+}
+.logoSm{
+
+      @include media-xl() {
+        display:none;
+      }
+
+      @include media-xxl() {
+        display:none;
+      }
+
+      @include media-lg() {
+        display:flex;
+      }
+      
+     
 }

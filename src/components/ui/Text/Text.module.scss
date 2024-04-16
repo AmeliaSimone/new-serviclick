@@ -1,0 +1,23 @@
+@import "../../../styles/mixins.scss";
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .textTitle {
+    font-size: 32px;
+    font-weight: 600;
+    color: #03495c;
+  }
+
+  .textParagraph {
+    font-size: 24px;
+    font-weight: 200;
+    width: 930px;
+    text-align: center;
+    color: #03495c;
+  }
+}

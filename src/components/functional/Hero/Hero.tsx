@@ -3,18 +3,19 @@ import React from "react";
 import styles from "./Hero.module.scss";
 
 import Wallpaper from "@/components/ui/Wallpaper";
-import Logo from "@/components/ui/Logo";
+import { Logo, LogoSm } from "@/components/ui/Logo";
 import Message from "@/components/ui/Message";
-import HamburgerMenu from "@/components/ui/HamburgerMenu/HamburgerMenu";
+import Menu from "@/components/ui/Menu/Menu";
 
 const Hero = () => {
+  const videoPath = "/img/hero/video.mp4";
   return (
-    <Wallpaper backgroundImage="/img/hero/banner.png" width="1288" height="750">
+    <Wallpaper backgroundVideo={videoPath} width={1620} height={600}>
       <div className={styles.nav}>
-        <Logo width="252px" height="53px" />
-        <HamburgerMenu />
+        <Logo width="214px" height="31px" img="/img/hero/logo.png" />
+        <LogoSm width="41px" height="31px" img="/img/hero/logoSM.png" />
+        <Menu />
       </div>
-
       <Message />
     </Wallpaper>
   );

@@ -1,2 +1,9 @@
-.about{
+@import "../../../styles/mixins.scss";
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 65px 160px;
 }

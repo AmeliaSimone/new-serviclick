@@ -9,6 +9,8 @@ import Contact from "@/components/functional/Contact";
 import Customers from "@/components/functional/Customers";
 import Services from "@/components/functional/Services";
 import Holding from "@/components/functional/Holding";
+import History from "@/components/functional/History";
+import Footer from "@/components/functional/Footer";
 
 
 
@@ -28,8 +30,10 @@ export default function Home() {
         <Services/>
         <AboutUs/>
         <Holding/>
+        <History/>
         <Contact/>
         <Customers/>
+        <Footer/>
       </main>
     </>
   );

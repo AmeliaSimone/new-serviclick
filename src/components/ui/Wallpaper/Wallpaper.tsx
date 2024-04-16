@@ -1,15 +1,22 @@
 import React from "react";
-
 import styles from "./Wallpaper.module.scss";
 
-const Wallpaper = ({ backgroundImage, width, height, children }: any) => {
+const Wallpaper = ({ backgroundVideo, width, height, children }: any) => {
   return (
-    <div
-      className={styles.wallpaper}
-      style={{
-        backgroundImage:`url(${backgroundImage})` ,
-        height: `calc(100vw * ${height} / ${width})`,
-      }}>
+    <div className={styles.wallpaper}>
+      <video
+        className={styles.video}
+        autoPlay
+        loop
+        muted
+        style={{
+          width: "100%",
+          height: `calc(100vw * ${height} / ${width})`,
+          objectFit: "cover",
+        }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
       {children}
     </div>
   );

@@ -1,15 +1,11 @@
 @import "../../../styles/mixins.scss";
 
 .message {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  width:100vw;
-  height: calc(100vh - 60px);
-  
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(600px - 71px);
 
   p {
     text-align: center;
@@ -17,34 +13,30 @@
     font-weight: 300;
     color: white;
 
-   
-   
     @include media-xl() {
-        font-size: 38px;
-      }
-      @include media-md() {
-        font-size: 28px;
-      }
+      font-size: 38px;
+    }
+    @include media-md() {
+      font-size: 28px;
+    }
 
-      @include media-sm() {
-        font-size: 20px;
-      }
-    
+    @include media-sm() {
+      font-size: 20px;
+    }
   }
 
   div {
     border-bottom: solid 5px #b4cd25;
     width: 348px;
 
-    
-     @include media-xl() {
-       width: 280px;
-      }
-      @include media-md() {
-        width: 210px;
-      }
-      @include media-sm() {
-        width: 149px;
-      }
+    @include media-xl() {
+      width: 280px;
+    }
+    @include media-md() {
+      width: 210px;
+    }
+    @include media-sm() {
+      width: 149px;
+    }
   }
 }
