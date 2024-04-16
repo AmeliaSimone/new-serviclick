@@ -5,15 +5,12 @@
     justify-content: flex-start;
     flex-direction: column;
     background-image: url("/img/hero/banner.png");
-    background-repeat: no-repeat;
     background-size: cover;
-    height:100vh;
     width: 100vw;
+    height: calc(100vw * 1000 / 1500 );
+    //750 / 1288
 
-    @include media-xl() {
-        height:100%;
-        width: 100%;
-      }
+   
 
 }
 

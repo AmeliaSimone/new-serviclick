@@ -1,43 +1,60 @@
+/* components/HamburgerMenu.module.scss */
+.menu {
+  display: flex;
+  align-items: center;
+}
 
-.container {
-    position: relative;
+.navLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  &.show {
+    display: block;
+  }
+
+  li {
+    margin-right: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+}
+
+.toggleButton {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: auto; /* Esto coloca el botón siempre a la derecha */
+  display: none; /* Ocultar el botón de hamburguesa por defecto */
+}
+
+@media (max-width: 1000px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    left: 0;
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .toggleButton {
+    display: block; /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+    color: white;
     
   }
-  
-  .hamburger {
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .line {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-  }
-  
-  .menu {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: #ffffff49;
-    border: 1px solid #ffffff;
-    padding: 10px;
-    width: 200px;
-    border-radius:  20px 0 20px 0;
-  }
-  
-  .menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu ul li {
-    padding: 5px 0;
-    color: white;
-  }
-  
-  
+}
