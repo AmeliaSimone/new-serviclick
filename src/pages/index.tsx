@@ -4,6 +4,12 @@ import Image from "next/image";
 import Hero from "@/components/functional/Hero";
 import Score from "@/components/functional/Score";
 import About from "@/components/functional/About";
+import AboutUs from "@/components/functional/AboutUs";
+import Contact from "@/components/functional/Contact";
+import Customers from "@/components/functional/Customers";
+import Services from "@/components/functional/Services";
+import Holding from "@/components/functional/Holding";
+
 
 
 export default function Home() {
@@ -19,6 +25,11 @@ export default function Home() {
         <Hero/>
         <Score/>
         <About/>
+        <Services/>
+        <AboutUs/>
+        <Holding/>
+        <Contact/>
+        <Customers/>
       </main>
     </>
   );
