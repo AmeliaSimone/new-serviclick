@@ -1,9 +1,9 @@
 import React from "react";
-import styles from "./Wallpaper.module.scss";
+import styles from "./WallpaperVideo.module.scss";
 
-const Wallpaper = ({ backgroundVideo, width, height, children }: any) => {
+const WallpaperVideo = ({ backgroundVideo, width, height, children }: any) => {
   return (
-    <div className={styles.wallpaper}>
+    <div className={styles.wallpaperVideo}>
       <video
         className={styles.video}
         autoPlay
@@ -22,4 +22,4 @@ const Wallpaper = ({ backgroundVideo, width, height, children }: any) => {
   );
 };
 
-export default Wallpaper;
+export default WallpaperVideo;
