@@ -1,0 +1,20 @@
+@import "../../../styles/mixins.scss";
+
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+
+  @include media-lg() {
+    font-size: 28px;
+  }
+  @include media-md() {
+    font-size: 24px;
+  }
+  @include media-sm() {
+    font-size: 20px;
+  }
+}

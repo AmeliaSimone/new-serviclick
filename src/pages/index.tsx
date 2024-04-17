@@ -25,11 +25,13 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <Score />
         <Wallpaper img="/img/score/FondoAbout.png" width="1288" height="1173">
-          <Score />
           <About />
+          <Services />
         </Wallpaper>
-        <Services />
+        
+
         <AboutUs />
         <Holding />
         <History />
