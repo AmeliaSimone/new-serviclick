@@ -1,2 +1,13 @@
-.aboutUs{
+.aboutus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+  height: 519px;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
 }
