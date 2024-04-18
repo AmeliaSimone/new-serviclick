@@ -8,7 +8,15 @@ const TitleBackground = ({title, backgroundColor, color, fontSize}: ITitleBackgr
     <div >
         <h3 className={styles.titleBackground} style={{backgroundColor, color, fontSize}}>{title}</h3>
     </div>
-  )
-}
+  );
+};
 
-export default TitleBackground
+const TitleBackgroundAbsolute = ({title, backgroundColor, color, fontSize}: ITitleBackground ) => {
+  return (
+    <div >
+        <h3 className={styles.titleBackgroundAbso} style={{backgroundColor, color, fontSize}}>{title}</h3>
+    </div>
+  );
+};
+
+export {TitleBackground, TitleBackgroundAbsolute};

@@ -1,12 +1,16 @@
+@import "../../../styles/mixins.scss";
+
 .cardContainer {
   display: flex;
   flex-direction: column;
+  align-items: center; 
 }
 
 .cardList {
   display: flex;
-  justify-content: space-between;
-  gap: 3px;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 20px; 
 }
 
 .card {
@@ -17,16 +21,24 @@
   height: auto;
   border-radius: 8px;
   cursor: pointer;
+  width: 250px; 
 
   h3 {
     background-color: #f3f4f6;
-    padding: 20px 95px;
-    width: 261px;
+    padding: 20px;
+    width: 100%;
     color: #03495c;
+    text-align: center;
   }
+
   div {
     border-bottom: solid 3px #d9d9d9;
-    width: 261px;
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%; 
+    height: auto;
   }
 }
 
@@ -37,13 +49,10 @@
 .selectedCard {
   h3 {
     background-color: #03495c;
-    padding: 20px 95px;
-    width: 261px;
     color: white;
   }
   div {
     border-bottom: solid 3px #b4cd25;
-    width: 261px;
   }
 }
 
@@ -52,15 +61,16 @@
   background-color: #f3f4f6;
   padding: 40px 30px;
   margin-top: 35px;
-
   ul {
-    li {
-      font-size: 20px;
-      font-weight: 300;
-      text-align: start;
-      color: #03495c;
-      margin-left: 40px;
-    }
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: start;
+    color: #03495c;
   }
 }
 
@@ -70,3 +80,5 @@
   text-align: start;
   color: #03495c;
 }
+
+

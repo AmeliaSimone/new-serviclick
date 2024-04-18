@@ -13,6 +13,7 @@ import History from "@/components/functional/History";
 import Footer from "@/components/functional/Footer";
 
 import Wallpaper from "@/components/ui/Wallpaper";
+import { TitleBackground, TitleBackgroundAbsolute } from "@/components/ui/TitleBackground";
 
 export default function Home() {
   return (
@@ -31,8 +32,9 @@ export default function Home() {
           <Services />
         </Wallpaper>
         <Wallpaper img="/img/aboutus/fondo.png" width="1288px" height="519px">
-        <AboutUs />
+          <AboutUs />
         </Wallpaper>
+        <TitleBackgroundAbsolute title="Serviclick es parte de MHM Empresas" backgroundColor="white" color="#03495C" fontSize="30px" />
         <Holding />
         <History />
         <Contact />

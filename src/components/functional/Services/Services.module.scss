@@ -7,4 +7,9 @@
   align-items: center;
   gap: 50px;
   padding: 60px;
+
+  @include media-xl() {
+    gap: 40px;
+  padding: 50px;
+  }
 }

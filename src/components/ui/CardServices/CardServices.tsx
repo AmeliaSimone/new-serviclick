@@ -65,9 +65,7 @@ const initialCards: Card[] = [
 ];
 
 const CardServices: React.FC = () => {
-  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(
-    null
-  );
+  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
 
   const handleClick = (index: number) => {
     setSelectedCardIndex(index);
@@ -79,9 +77,7 @@ const CardServices: React.FC = () => {
         {initialCards.map((card, index) => (
           <div
             key={index}
-            className={`${styles.card} ${
-              selectedCardIndex === index ? styles.selectedCard : ""
-            }`}
+            className={`${styles.card} ${selectedCardIndex === index ? styles.selectedCard : ""}`}
             onClick={() => handleClick(index)}
           >
             <div></div>
@@ -92,9 +88,7 @@ const CardServices: React.FC = () => {
       </div>
       {selectedCardIndex !== null && (
         <div className={styles.descriptionContainer}>
-          <p className={styles.description}>
-            {initialCards[selectedCardIndex].description}
-          </p>
+          <p className={styles.description}>{initialCards[selectedCardIndex].description}</p>
           <ul>
             {initialCards[selectedCardIndex].list.map((item, index) => (
               <li key={index}>{item}</li>

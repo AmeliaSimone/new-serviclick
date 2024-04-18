@@ -1,3 +1,3 @@
-import TitleBackground from "./TitleBackground";
+import {TitleBackground, TitleBackgroundAbsolute} from "./TitleBackground";
 
-export default TitleBackground;
+export {TitleBackground, TitleBackgroundAbsolute};

@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Services.module.scss";
 import Title from "@/components/ui/Title";
-import TitleBackground from "@/components/ui/TitleBackground";
+import { TitleBackground } from "@/components/ui/TitleBackground/TitleBackground";
 import CardServices from "@/components/ui/CardServices";
 
 const Services = () => {
