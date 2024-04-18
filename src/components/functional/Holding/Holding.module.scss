@@ -11,12 +11,23 @@
   border-radius: 20px;
   position: relative;
 
+  @include media-xl() {
+    
+    padding: 60px;
+    margin: 150px 60px;
+  }
   @include media-lg() {
     
-    padding: 20px;
+    padding: 60px;
+    margin: 150px 60px;
   }
 
   .rowOne{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
     img{
         padding: 20px;
 
@@ -35,6 +46,11 @@
 }
 
 .rowTwo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
     img{
         padding: 20px;
         @include media-xl() {
@@ -55,8 +71,11 @@
 }
 
 .rowThree{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
     img{
         padding: 20px;
 

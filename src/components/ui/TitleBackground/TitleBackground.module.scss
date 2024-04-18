@@ -22,18 +22,22 @@
     padding: 2vw;
     width: 40vw;
     max-width: 80%;
-    transform: translate(-50%, 80%);
+    transform: translate(-50%, 120%);
     
 
+    @include media-xxl() {
+      padding: 2vw;
+      width: 40vw;
+      transform: translate(-50%, 80%);
+    }
     @include media-xl() {
         padding: 2vw;
-        width: 90vw;
-        transform: translate(-50%, 130%);
+        width: 60vw;
+        transform: translate(-50%, 140%);
       }
       @include media-lg() {
         padding: 2vw;
-        max-width: 80%;
-        width: 90vw;
+        width: 80vw;
         transform: translate(-50%, 150%);
       }
       @include media-md() {

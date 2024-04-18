@@ -1,2 +1,28 @@
-.contact{
+@import "../../../styles/mixins.scss";
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px 100px;
+  height: auto;
+  background-color: #F3F4F6;
+  border-bottom: solid 8px #B4CD25;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  gap: 13px;
+}
+
+.rrss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
 }

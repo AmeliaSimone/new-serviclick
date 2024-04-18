@@ -36,9 +36,11 @@ export default function Home() {
         </Wallpaper>
         <TitleBackgroundAbsolute title="Serviclick es parte de MHM Empresas" backgroundColor="white" color="#03495C" fontSize="30px" />
         <Holding />
-        <History />
-        <Contact />
         <Customers />
+        <Wallpaper img="/img/history/fondo.png" width="1297px" height="1440px">
+        <History />
+        </Wallpaper>
+        <Contact img="/img/contact/mapa.png" />
         <Footer />
       </main>
     </>
