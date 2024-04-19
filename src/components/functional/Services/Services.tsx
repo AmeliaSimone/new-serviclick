@@ -10,12 +10,12 @@ const Services = () => {
     <div className={styles.services}>
       <Title
         color="#03495c"
-        fontSize="32px"
+        size="large"
         title="Soluciones para tus clientes"
       />
       <TitleBackground
         color="white"
-        fontSize="24px"
+        fontSize=""
         backgroundColor="#03495C"
         title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
       />

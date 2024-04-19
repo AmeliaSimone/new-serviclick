@@ -2,10 +2,6 @@ import React from "react";
 
 import styles from "./CardHistory.module.scss";
 
-
-
-
-
 interface ICardHistory {
   backgroundImage: string;
   children: React.ReactNode;

@@ -8,3 +8,24 @@
   font-family: "Inter";
   font-size: 16px;
 }
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #cccccc;
+}
+
+:hover::-webkit-scrollbar {
+  background-color: rgba(149, 149, 149, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666666;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  overflow: hidden;
+  overflow-y: auto;
+}

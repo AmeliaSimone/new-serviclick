@@ -1,3 +1,3 @@
-import {Logo, LogoSm} from "./Logo";
+import Logo from "./Logo";
 
-export {Logo, LogoSm};
+export default Logo;

@@ -1,65 +1,99 @@
 @import "../../../styles/mixins.scss";
+
 .menu {
+  position: relative;
+ 
+
+
   ul {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 40px;
+    padding: 20px;
+    width: auto;
+    
 
     @include media-lg() {
-      display: none;
+      display: none; 
+      width: 100%;
+    }
+  }
+
+  .menuItems {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  
+
+    @include media-lg() {
+      display: none; 
     }
    
   }
 
+  .menuItemsOpen {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    margin: 0;
+    background-color: #ffffff; 
+    position: absolute; 
+    right:0;
+    height: auto;
+    width: auto; 
+
+    @include media-lg() {
+     
+    }
+  }
+
+  .mobileMenuIcon {
+    display: none; 
+
+    @include media-lg() {
+      display: block; 
+      cursor: pointer;
+    }
+  }
+
   li {
     list-style: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 400;
+    cursor: pointer;
+    
 
+    @include media-lg() {
+      padding: 0 50px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      color: rgb(0, 0, 0);
+    }
+
+    &:hover{
+      list-style: none;
+    color: #B4CD25;
+    font-size: 16px;
+    font-weight: 400;
    
-     
+  
+    
+    }
   }
-}
-// Menu.module.scss
-
-.menu {
-  position: relative;
-}
-
-.menuItems {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  @include media-md() {
-    display: none;
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white; 
+    margin: 4px 0;
+  
     
   }
-}
-
-.menuItemsOpen {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.mobileMenuIcon {
-  display: none; // Oculta el ícono en pantallas grandes
-  @include media-lg() {
-    display: block;
-    cursor: pointer;
-  }
+ 
 }
 
 
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 4px 0;
-}

@@ -8,6 +8,10 @@
   background-color: black;
   height: auto;
   padding: 20px 40px;
+
+  @include media-lg() {
+    justify-content: center;
+  }
 }
 .content{
   display: flex;

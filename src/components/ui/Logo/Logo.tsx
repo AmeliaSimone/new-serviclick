@@ -3,30 +3,50 @@ import React from "react";
 import styles from "./Logo.module.scss";
 
 interface Ilogo {
-  width: string;
-  height: string;
-  img: string;
+  img?: string;
+  width?: string;
+  height?: string;
+  secondImg?: string;
+  secondImgWidth?: string; 
+  secondImgHeight?: string;
+  thirdImg?: string;
+  thirdImgWidth?: string; 
+  thirdImgHeight?: string;
 }
-const Logo = ({ width, height, img }: Ilogo) => {
+const Logo = ({img, width, height, secondImg, secondImgWidth, secondImgHeight, thirdImg, thirdImgWidth, thirdImgHeight}: Ilogo) => {
   return (
-    <img
-      className={styles.logo}
-      style={{ width, height }}
-      src={`${img}`}
-      alt=""
-    />
+    <div className={styles.container}>
+    <img src={`${img}`}className={styles.logo} style={{
+          width: "100%",
+          height: `calc(100vw * ${height} / ${width})`,
+        }} />
+
+{secondImg && (
+        <img
+          src={`${secondImg}`}
+          className={styles.secondImg}
+          style={{
+            width: "100%",
+            height: `calc(100vw * ${secondImgHeight} / ${secondImgWidth})`,
+          }}
+          alt=""
+        />
+      )}
+
+{thirdImg && (
+        <img
+          src={`${thirdImg}`}
+          className={styles.thirdImg}
+          style={{
+            width: "100%",
+            height: `calc(100vw * ${thirdImgHeight} / ${thirdImgWidth})`,
+          }}
+          alt=""
+        />
+      )}
+  </div>
   );
 };
 
-const LogoSm = ({ width, height, img }: Ilogo) => {
-  return (
-    <img
-      className={styles.logoSm}
-      style={{ width, height }}
-      src={`${img}`}
-      alt=""
-    />
-  );
-};
 
-export { Logo, LogoSm };
+export default Logo;

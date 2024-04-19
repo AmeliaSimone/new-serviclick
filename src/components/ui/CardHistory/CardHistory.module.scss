@@ -7,6 +7,11 @@
   background-position: center;
   overflow: hidden;
 
+  @include media-lg() {
+    width: 250px;
+    height: 350px;
+  }
+
 }
 
 .content {
