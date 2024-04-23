@@ -7,10 +7,11 @@ interface IWallpaper {
   height: string;
   children: any;
 }
-const Wallpaper = ({ img, width, height, children}: IWallpaper) => {
+const Wallpaper = ({ img, width, height, children }: IWallpaper) => {
   return (
     <div className={styles.wallpaper}>
-      <img className={styles.img}
+      <img
+        className={styles.img}
         src={`${img}`}
         alt=""
         style={{

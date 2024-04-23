@@ -6,20 +6,24 @@ interface IText {
   fontSize: string;
   color: string;
 }
-const Text = ({text, fontSize, color }: IText) => {
+const Text = ({ text, fontSize, color }: IText) => {
   return (
     <div className={styles.text}>
-      <p className={styles.textParagraph} style={{fontSize, color}}>{text}</p>
+      <p className={styles.textParagraph} style={{ fontSize, color }}>
+        {text}
+      </p>
     </div>
   );
 };
 
-const TextStart = ({text, fontSize, color }: IText) => {
+const TextStart = ({ text, fontSize, color }: IText) => {
   return (
     <div className={styles.textStart}>
-      <p className={styles.textParagraph} style={{fontSize, color}}>{text}</p>
+      <p className={styles.textParagraph} style={{ fontSize, color }}>
+        {text}
+      </p>
     </div>
   );
 };
 
-export {Text, TextStart};
+export { Text, TextStart };

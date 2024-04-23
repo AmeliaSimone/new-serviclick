@@ -1,14 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import styles from './CardScore.module.scss';
 
-import styles from "./CardScore.module.scss"
+interface ICardScoreProps {
+  title: number;
+  text: string;
+  duration: number; 
+  unitTextLeft?: string;
+  unitTextRight?: string; 
+}
 
-interface ICardScore {title: string; text:string; }
+const CardScore: React.FC<ICardScoreProps> = ({ title, text, duration, unitTextLeft, unitTextRight = '' }) => {
+  const [count, setCount] = useState(0);
+  const [minTitle, setMinTitle] = useState(Number.MAX_SAFE_INTEGER);
 
-const CardScore = ({title, text}:ICardScore) => {
+  useEffect(() => {
+   
+    setMinTitle(prevMin => Math.min(prevMin, title));
+  }, [title]);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+  
+    if (count <= minTitle) {
+      interval = setInterval(() => {
+        setCount(prevCount => prevCount + 1);
+      }, duration); 
+    }
+
+
+    return () => clearInterval(interval);
+  }, [count, minTitle, duration]);
+
   return (
     <div className={styles.cardScore}>
-        <h2 className={styles.cardTitle}>{title}</h2>
-        <p className={styles.cardText}>{text}</p>
+      <motion.h2 className={styles.cardTitle}>
+      {unitTextLeft} {} {count}  {unitTextRight} {}
+      </motion.h2>
+      <p className={styles.cardText}>{text}</p>
     </div>
   );
 };

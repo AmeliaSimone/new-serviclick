@@ -1,27 +1,43 @@
 import React from "react";
 
 import styles from "./Logo.module.scss";
+import { motion } from "framer-motion";
+import withScrollAnimation from "@/components/ui/Framer";
 
 interface Ilogo {
   img?: string;
   width?: string;
   height?: string;
   secondImg?: string;
-  secondImgWidth?: string; 
+  secondImgWidth?: string;
   secondImgHeight?: string;
   thirdImg?: string;
-  thirdImgWidth?: string; 
+  thirdImgWidth?: string;
   thirdImgHeight?: string;
 }
-const Logo = ({img, width, height, secondImg, secondImgWidth, secondImgHeight, thirdImg, thirdImgWidth, thirdImgHeight}: Ilogo) => {
+const Logo = ({
+  img,
+  width,
+  height,
+  secondImg,
+  secondImgWidth,
+  secondImgHeight,
+  thirdImg,
+  thirdImgWidth,
+  thirdImgHeight,
+}: Ilogo) => {
   return (
     <div className={styles.container}>
-    <img src={`${img}`}className={styles.logo} style={{
+      <img
+        src={`${img}`}
+        className={styles.logo}
+        style={{
           width: "100%",
           height: `calc(100vw * ${height} / ${width})`,
-        }} />
+        }}
+      />
 
-{secondImg && (
+      {secondImg && (
         <img
           src={`${secondImg}`}
           className={styles.secondImg}
@@ -33,7 +49,7 @@ const Logo = ({img, width, height, secondImg, secondImgWidth, secondImgHeight, t
         />
       )}
 
-{thirdImg && (
+      {thirdImg && (
         <img
           src={`${thirdImg}`}
           className={styles.thirdImg}
@@ -44,9 +60,8 @@ const Logo = ({img, width, height, secondImg, secondImgWidth, secondImgHeight, t
           alt=""
         />
       )}
-  </div>
+    </div>
   );
 };
-
 
 export default Logo;

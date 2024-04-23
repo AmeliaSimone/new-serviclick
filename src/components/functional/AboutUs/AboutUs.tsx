@@ -6,7 +6,7 @@ import Title from "@/components/ui/Title";
 
 const AboutUs = () => {
   return (
-    <div className={styles.aboutus}>
+    <div className={styles.aboutus} id="sobre">
       <Title title="Quienes somos" size="medium" color="white" />
       <div className={styles.cards}>
         <CardAboutUs

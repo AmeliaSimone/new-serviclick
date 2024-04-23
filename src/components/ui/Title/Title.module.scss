@@ -6,9 +6,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
- 
 }
-
 
 .large {
   font-size: 32px;
@@ -23,7 +21,6 @@
   @include media-sm() {
     font-size: 20px;
   }
- 
 }
 
 .medium {
@@ -54,5 +51,4 @@
   @include media-sm() {
     font-size: 10px;
   }
- 
 }

@@ -7,7 +7,7 @@
   align-items: center;
   height: 350px;
   width: 350px;
-  padding:40px 75px 40px 75px ;
+  padding: 40px 75px 40px 75px;
   border: solid 1px #b4cd25;
   border-radius: 30px 4px 30px 4px;
   gap: 5px;
@@ -15,17 +15,17 @@
   @include media-lg() {
     height: 300px;
     width: 300px;
-    padding:30px 65px;
+    padding: 30px 65px;
   }
   @include media-md() {
     height: 250px;
-    width:  250px;
-    padding:20px 55px ;
+    width: 250px;
+    padding: 20px 55px;
   }
   @include media-sm() {
     height: 200px;
-  width: 200px;
-  padding:10px 45px ;
+    width: 200px;
+    padding: 10px 45px;
   }
 
   h2 {
@@ -35,14 +35,14 @@
     text-align: center;
 
     @include media-lg() {
-        font-size: 14px;
-      }
-      @include media-md() {
-        font-size: 12px;
-      }
-      @include media-sm() {
-        font-size: 10px;
-      }
+      font-size: 14px;
+    }
+    @include media-md() {
+      font-size: 12px;
+    }
+    @include media-sm() {
+      font-size: 10px;
+    }
   }
   p {
     font-size: 14px;
@@ -51,13 +51,13 @@
     text-align: center;
 
     @include media-lg() {
-        font-size: 12px;
-      }
-      @include media-md() {
-        font-size: 10px;
-      }
-      @include media-sm() {
-        font-size: 10px;
-      }
+      font-size: 12px;
+    }
+    @include media-md() {
+      font-size: 10px;
+    }
+    @include media-sm() {
+      font-size: 10px;
+    }
   }
 }

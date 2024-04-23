@@ -1,17 +1,52 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import styles from './Score.module.scss'; 
+import CardScore from '@/components/ui/CardScore';
+import withScrollAnimation from "@/components/ui/Framer";
 
-import styles from "./Score.module.scss";
-import CardScore from "@/components/ui/CardScore";
-const Score = () => {
+interface IScoreProps {
+  content: { title: number; text: string; duration: number; unitTextLeft?: string; unitTextRight?: string; }[];
+}
+
+const Score: React.FC<IScoreProps> = ({ content }) => {
+ 
+  
+  const controls = useAnimation();
+
+ 
+  useEffect(() => {
+    controls.start({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2 
+      }
+    });
+  }, [controls]);
+
   return (
-    <div className={styles.background}>
+   
+    <motion.div
+      className={styles.background}
+      initial={{ opacity: 0, y: 50 }} 
+      animate={controls} 
+    >
       <div className={styles.score}>
-        <CardScore title="+22 " text="Años de Experiencia"></CardScore>
-        <CardScore title="+900M" text="Clientes Finales"></CardScore>
-        <CardScore title="+20" text="Alianzas y Clientes"></CardScore>
-        <CardScore title="24hrs" text="Presentes en todo Chile"></CardScore>
+        {content &&
+          content.map((item, index) => (
+            <CardScore
+              key={index}
+              title={item.title}
+              text={item.text}
+              duration={item.duration}
+              unitTextLeft={item.unitTextLeft}
+              unitTextRight={item.unitTextRight}
+            />
+          ))}
       </div>
-    </div>
+    </motion.div>
+  
   );
 };
 

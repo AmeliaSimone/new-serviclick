@@ -12,7 +12,7 @@ interface IContact {
 }
 const Contact = ({ img, width, height }: IContact) => {
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} id="ubicacion">
       <div className={styles.text}>
         <TextStart text="Contacto" fontSize="20px" color="" />
         <TextStart text="6000860580" fontSize=""  color=""/>

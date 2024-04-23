@@ -1,44 +1,84 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Menu.module.scss";
 import Icon from "../Icon";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Menu = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
 
-  // Función para manejar el estado del menú en pantallas pequeñas
   const handleResize = () => {
-    if (window.innerWidth <= 768) { // Tamaño de pantalla pequeña (ejemplo: 768px)
-      setMobileMenuOpen(true); // Abrir el menú automáticamente en pantallas pequeñas
+    if (window.innerWidth <= 768) {
+      setMobileMenuOpen(true);
     } else {
       setMobileMenuOpen(false);
     }
   };
 
-  // Al montar el componente, verificamos el tamaño de la pantalla inicial
+  const handleLinkClick = (
+    sectionId: string,
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
+    scrollToSection(sectionId);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     handleResize();
-    // Agregamos el event listener para cambiar el estado del menú cuando el tamaño de la pantalla cambie
     window.addEventListener("resize", handleResize);
-    // Limpiamos el event listener cuando el componente se desmonte
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Función para alternar el estado del menú móvil
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const openContactForm = () => {
+    setShowContactForm(true);
+  };
+
+  const closeContactForm = () => {
+    setShowContactForm(false);
   };
 
   return (
     <div className={styles.menu}>
       <div className={styles.mobileMenuIcon} onClick={toggleMobileMenu}>
-        <Icon icon="menu" color="#ffffff" />
+        <Icon
+          icon={isMobileMenuOpen ? "close" : "menu"}
+          color={isMobileMenuOpen ? "#000000" : "#ffffff"}
+        />
       </div>
       <ul className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}>
-        <li>Novedades</li>
-        <li>Servicios</li>
-        <li>Sobre Nosotros</li>
-        <li>Ubicación</li>
-        <li>Contacto</li>
+        <li>
+          <a onClick={(e) => handleLinkClick("novedades", e)} href="#novedades">
+            Novedades
+          </a>
+        </li>
+        <li>
+          <a onClick={(e) => handleLinkClick("servicios", e)} href="#servicios">Servicios</a>
+        </li>
+        <li>
+          <a onClick={(e) => handleLinkClick("sobre", e)} href="#sobre">Sobre Nosotros</a>
+        </li>
+        <li>
+          <a onClick={(e) => handleLinkClick("ubicacion", e)} href="#ubicacion">Ubicación</a>
+        </li>
+        <li>
+          <a onClick={openContactForm}>Contacto</a>
+          {showContactForm && (
+            <div className={styles.contactForm}>
+              <ContactForm onClose={closeContactForm} />
+            </div>
+          )}
+        </li>
       </ul>
     </div>
   );

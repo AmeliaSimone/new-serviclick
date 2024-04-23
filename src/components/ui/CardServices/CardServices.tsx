@@ -1,6 +1,6 @@
-// CardServices.tsx
 import React, { useState } from "react";
 import styles from "./CardServices.module.scss";
+import withScrollAnimation from "@/components/ui/Framer";
 
 interface Card {
   title: string;
@@ -25,7 +25,7 @@ const initialCards: Card[] = [
   },
   {
     title: "HOGAR",
-    description: "2Puedes encontrar beneficios para tus clientes en:",
+    description: "Puedes encontrar beneficios para tus clientes en:",
     list: [
       "Atención Ambulatoria",
       "Atención de Urgencias ",
@@ -38,7 +38,7 @@ const initialCards: Card[] = [
   },
   {
     title: "MASCOTAS",
-    description: "3Puedes encontrar beneficios para tus clientes en:",
+    description: "Puedes encontrar beneficios para tus clientes en:",
     list: [
       "Atención Ambulatoria",
       "Atención de Urgencias ",
@@ -51,7 +51,7 @@ const initialCards: Card[] = [
   },
   {
     title: "MOVILIDAD",
-    description: "4Puedes encontrar beneficios para tus clientes en:",
+    description: "Puedes encontrar beneficios para tus clientes en:",
     list: [
       "Atención Ambulatoria",
       "Atención de Urgencias ",
@@ -65,37 +65,46 @@ const initialCards: Card[] = [
 ];
 
 const CardServices: React.FC = () => {
-  const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
+  const [selectedCardIndex, setSelectedCardIndex] = useState<number>(0);
 
   const handleClick = (index: number) => {
     setSelectedCardIndex(index);
   };
 
+  const AnimateDiv = withScrollAnimation("div");
+
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.cardList}>
-        {initialCards.map((card, index) => (
-          <div
-            key={index}
-            className={`${styles.card} ${selectedCardIndex === index ? styles.selectedCard : ""}`}
-            onClick={() => handleClick(index)}
-          >
-            <div></div>
-            <img src={card.img} alt="" />
-            <h3>{card.title}</h3>
-          </div>
-        ))}
-      </div>
-      {selectedCardIndex !== null && (
-        <div className={styles.descriptionContainer}>
-          <p className={styles.description}>{initialCards[selectedCardIndex].description}</p>
-          <ul>
-            {initialCards[selectedCardIndex].list.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
+      <AnimateDiv>
+        <div className={styles.cardList}>
+          {initialCards.map((card, index) => (
+            <div
+              key={index}
+              className={`${styles.card} ${
+                selectedCardIndex === index ? styles.selectedCard : ""
+              }`}
+              onClick={() => handleClick(index)}
+            >
+              <div></div>
+              <img src={card.img} alt="" />
+              <h3>{card.title}</h3>
+            </div>
+          ))}
         </div>
-      )}
+
+        {selectedCardIndex !== null && (
+          <div className={styles.descriptionContainer}>
+            <p className={styles.description}>
+              {initialCards[selectedCardIndex].description}
+            </p>
+            <ul>
+              {initialCards[selectedCardIndex].list.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </AnimateDiv>
     </div>
   );
 };
