@@ -27,12 +27,12 @@ const initialCards: Card[] = [
     title: "HOGAR",
     description: "Puedes encontrar beneficios para tus clientes en:",
     list: [
-      "Atención Ambulatoria",
-      "Atención de Urgencias ",
-      "Atención de Especialista",
-      "Telemedicina",
-      "Descuento en farmacias",
-      "Exámenes y mucho más",
+      "Servicios de Plomería",
+      "Servicios de Cerrajería ",
+      "Servicios de Vidriería",
+      "Servicios de Electricista",
+      "Servicios de Pintura",
+      "Instalaciones, perforaciones y mucho más",
     ],
     img: "/img/services/hogar.png",
   },
@@ -40,12 +40,12 @@ const initialCards: Card[] = [
     title: "MASCOTAS",
     description: "Puedes encontrar beneficios para tus clientes en:",
     list: [
-      "Atención Ambulatoria",
-      "Atención de Urgencias ",
-      "Atención de Especialista",
-      "Telemedicina",
-      "Descuento en farmacias",
-      "Exámenes y mucho más",
+      "Atención Urgencia Veterinaria ",
+      "Atención Consulta Veterinaria",
+      "Vacuna Antirrábica ",
+      "Telemedicina Veterinaria ",
+      "Asistencia Legal Telefónica",
+      "Descuentos en Farmacias y mucho más ",
     ],
     img: "/img/services/mascotas.png",
   },
@@ -67,7 +67,8 @@ const initialCards: Card[] = [
 const CardServices: React.FC = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState<number>(0);
 
-  const handleClick = (index: number) => {
+
+  const handleHover = (index: number) => {
     setSelectedCardIndex(index);
   };
 
@@ -75,7 +76,7 @@ const CardServices: React.FC = () => {
 
   return (
     <div className={styles.cardContainer}>
-      <AnimateDiv>
+     
         <div className={styles.cardList}>
           {initialCards.map((card, index) => (
             <div
@@ -83,7 +84,8 @@ const CardServices: React.FC = () => {
               className={`${styles.card} ${
                 selectedCardIndex === index ? styles.selectedCard : ""
               }`}
-              onClick={() => handleClick(index)}
+              onMouseEnter={() => handleHover(index)}
+              onMouseLeave={() => setSelectedCardIndex(0)}
             >
               <div></div>
               <img src={card.img} alt="" />
@@ -104,7 +106,7 @@ const CardServices: React.FC = () => {
             </ul>
           </div>
         )}
-      </AnimateDiv>
+      
     </div>
   );
 };

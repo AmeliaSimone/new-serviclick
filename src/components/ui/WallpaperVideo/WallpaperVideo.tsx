@@ -22,4 +22,25 @@ const WallpaperVideo = ({ backgroundVideo, width, height, children }: any) => {
   );
 };
 
-export default WallpaperVideo;
+const WallpaperVideo2 = ({ backgroundVideo, width, height, children }: any) => {
+  return (
+    <div className={styles.wallpaperVideo2}>
+      <video
+        className={styles.video}
+        autoPlay
+        loop
+        muted
+        style={{
+          width: "100%",
+          height: `calc(100vw * ${height} / ${width})`,
+          objectFit: "cover",
+        }}
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
+      {children}
+    </div>
+  );
+};
+
+export  {WallpaperVideo, WallpaperVideo2};

@@ -11,16 +11,22 @@ import Services from "@/components/functional/Services";
 import Holding from "@/components/functional/Holding";
 import History from "@/components/functional/History";
 import Footer from "@/components/functional/Footer";
+import New from "@/components/functional/New";
+
 
 import Wallpaper from "@/components/ui/Wallpaper";
 import withScrollAnimation from "@/components/ui/Framer";
+import {WallpaperVideo, WallpaperVideo2} from "@/components/ui/WallpaperVideo/WallpaperVideo";
+
 import {
   TitleBackground,
   TitleBackgroundAbsolute,
 } from "@/components/ui/TitleBackground";
 import { motion } from "framer-motion";
 
+
 export default function Home() {
+  const videoPath = "/img/aboutus/video.mp4";
   const AnimateDiv = withScrollAnimation("div");
   return (
     <>
@@ -68,20 +74,24 @@ export default function Home() {
           <About />
           <Services />
         </Wallpaper>
-        <Wallpaper img="/img/aboutus/fondo.png" width="1288px" height="519px">
+        <WallpaperVideo2 backgroundVideo={videoPath} width={1620} height={500}>
           <AboutUs />
-        </Wallpaper>
+          </WallpaperVideo2>
+        <AnimateDiv>
         <TitleBackgroundAbsolute
           title="Serviclick es parte de MHM Empresas"
           backgroundColor="white"
           color="#03495C"
           fontSize=""
-        />
+        /></AnimateDiv>
+        <AnimateDiv>
         <Holding />
+        </AnimateDiv>
         <Customers />
         <Wallpaper img="/img/history/fondo.png" width="1297px" height="1440px">
           <History />
         </Wallpaper>
+        <New img="/img/new/img1.png" width="262px" height="173px" img2="/img/new/img2.png" width2="362px" height2="273px" img3="/img/new/img3.png" width3="362px" height3="273px" />
         <Contact img="/img/contact/mapa.png" width="280px" height="240px" />
         <Footer />
       </main>

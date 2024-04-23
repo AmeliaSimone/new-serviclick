@@ -1,0 +1,31 @@
+@import "../../../styles/mixins.scss";
+
+.new {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+  padding: 40px;
+}
+
+.imgContainer {
+    display:flex ;
+    align-items: center;
+    justify-content:center;
+    width:auto;
+    gap: 20px;
+    padding: 25px 85px;
+
+    @include media-lg(){
+        flex-wrap: wrap;
+    padding: 10px 30px;
+    width: 60%;
+    gap: 10px;
+    }
+
+    
+
+}

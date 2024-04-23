@@ -30,7 +30,9 @@ const Services = () => {
           title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
         />{" "}
       </AnimateDiv>
+      <AnimateDiv>
       <CardServices />
+      </AnimateDiv>
     </motion.div>
   );
 };

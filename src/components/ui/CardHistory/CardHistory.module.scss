@@ -7,6 +7,8 @@
   background-position: center;
   overflow: hidden;
   perspective: 1000px;
+  border-radius: 30px 4px;
+
 
   @include media-lg() {
     width: 250px;
@@ -29,6 +31,11 @@
     padding: 35px;
     backface-visibility: hidden;
     transition: transform 0.6s ease;
+    position: relative;
+
+    @include media-lg() {
+      padding: 10px;
+    }
   }
 
   .backContent {
@@ -44,5 +51,16 @@
     height: 100%;
     overflow: hidden;
     cursor: pointer;
+    
+    @include media-lg() {
+      padding: 10px;
+    }
   }
+  .backgroundColor{
+    background: linear-gradient(#03495C, #118BAB);
+    border-radius: 30px 4px;
+  
+  }
+
+  
 }

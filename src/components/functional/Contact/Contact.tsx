@@ -5,14 +5,18 @@ import styles from "./Contact.module.scss";
 import { Text, TextStart } from "@/components/ui/Text";
 import  Logo from "@/components/ui/Logo";
 
+import withScrollAnimation from "@/components/ui/Framer";
+
 interface IContact {
   img: string;
   width: string;
   height: string;
 }
 const Contact = ({ img, width, height }: IContact) => {
+  const AnimateDiv = withScrollAnimation("div");
   return (
     <div className={styles.contact} id="ubicacion">
+      <AnimateDiv>
       <div className={styles.text}>
         <TextStart text="Contacto" fontSize="20px" color="" />
         <TextStart text="6000860580" fontSize=""  color=""/>
@@ -29,14 +33,14 @@ const Contact = ({ img, width, height }: IContact) => {
           
   
         </div>
-      </div>
-
+      </div></AnimateDiv>
+      <AnimateDiv>
       <div className={styles.img}>
         <img className={styles.img} src={`${img}`} style={{
           width: "100%",
           height: `calc(100vw * ${height} / ${width})`,
         }} alt="" />
-      </div>
+      </div></AnimateDiv>
     </div>
   );
 };

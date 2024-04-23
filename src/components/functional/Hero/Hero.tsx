@@ -5,7 +5,7 @@ import styles from "./Hero.module.scss";
 import Logo from "@/components/ui/Logo";
 import Message from "@/components/ui/Message";
 import Menu from "@/components/ui/Menu/Menu";
-import WallpaperVideo from "@/components/ui/WallpaperVideo/WallpaperVideo";
+import {WallpaperVideo, WallpaperVideo2 }from "@/components/ui/WallpaperVideo/WallpaperVideo";
 import { motion, useScroll } from "framer-motion";
 import withScrollAnimation from "@/components/ui/Framer";
 
