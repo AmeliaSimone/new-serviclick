@@ -67,7 +67,6 @@ const initialCards: Card[] = [
 const CardServices: React.FC = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState<number>(0);
 
-
   const handleHover = (index: number) => {
     setSelectedCardIndex(index);
   };
@@ -76,37 +75,35 @@ const CardServices: React.FC = () => {
 
   return (
     <div className={styles.cardContainer}>
-     
-        <div className={styles.cardList}>
-          {initialCards.map((card, index) => (
-            <div
-              key={index}
-              className={`${styles.card} ${
-                selectedCardIndex === index ? styles.selectedCard : ""
-              }`}
-              onMouseEnter={() => handleHover(index)}
-              onMouseLeave={() => setSelectedCardIndex(0)}
-            >
-              <div></div>
-              <img src={card.img} alt="" />
-              <h3>{card.title}</h3>
-            </div>
-          ))}
-        </div>
-
-        {selectedCardIndex !== null && (
-          <div className={styles.descriptionContainer}>
-            <p className={styles.description}>
-              {initialCards[selectedCardIndex].description}
-            </p>
-            <ul>
-              {initialCards[selectedCardIndex].list.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+      <div className={styles.cardList}>
+        {initialCards.map((card, index) => (
+          <div
+            key={index}
+            className={`${styles.card} ${
+              selectedCardIndex === index ? styles.selectedCard : ""
+            }`}
+            onMouseEnter={() => handleHover(index)}
+            onMouseLeave={() => setSelectedCardIndex(0)}
+          >
+            <div></div>
+            <img src={card.img} alt="" />
+            <h3>{card.title}</h3>
           </div>
-        )}
-      
+        ))}
+      </div>
+
+      {selectedCardIndex !== null && (
+        <div className={styles.descriptionContainer}>
+          <p className={styles.description}>
+            {initialCards[selectedCardIndex].description}
+          </p>
+          <ul>
+            {initialCards[selectedCardIndex].list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

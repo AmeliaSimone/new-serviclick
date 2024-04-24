@@ -26,14 +26,13 @@
       top: 0;
       left: 0;
       bottom: 0;
-      border: 2px solid #03495C;
-      border-radius:50px 4px ;
+      border: 2px solid #03495c;
+      border-radius: 50px 4px;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
 
       &.menuItemsOpen {
         transform: translateX(0%);
-        
       }
     }
   }
@@ -62,26 +61,24 @@
     &:hover {
       color: #b4cd25;
     }
-    a{
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-    list-style: none;
-    font-size: 16px;
-    font-weight: 500;
-
-    @include media-lg() {
-      color: #03495C;
+    a {
+      text-decoration: none;
+      color: #ffffff;
       cursor: pointer;
       list-style: none;
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 500;
 
-      &:hover {
-        color: #b4cd25;
+      @include media-lg() {
+        color: #03495c;
+        cursor: pointer;
+        list-style: none;
+        font-size: 18px;
+
+        &:hover {
+          color: #b4cd25;
+        }
       }
-    }
-
-    
     }
   }
 }

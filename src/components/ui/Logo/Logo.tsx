@@ -1,8 +1,7 @@
 import React from "react";
 
 import styles from "./Logo.module.scss";
-import { motion } from "framer-motion";
-import withScrollAnimation from "@/components/ui/Framer";
+
 
 interface Ilogo {
   img?: string;

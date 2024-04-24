@@ -9,7 +9,6 @@
   perspective: 1000px;
   border-radius: 30px 4px;
 
-
   @include media-lg() {
     width: 250px;
     height: 350px;
@@ -51,16 +50,13 @@
     height: 100%;
     overflow: hidden;
     cursor: pointer;
-    
+
     @include media-lg() {
       padding: 10px;
     }
   }
-  .backgroundColor{
-    background: linear-gradient(#03495C, #118BAB);
+  .backgroundColor {
+    background: linear-gradient(#03495c, #118bab);
     border-radius: 30px 4px;
-  
   }
-
-  
 }

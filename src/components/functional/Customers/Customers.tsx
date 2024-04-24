@@ -8,15 +8,15 @@ import withScrollAnimation from "@/components/ui/Framer";
 
 const Customers = () => {
   const AnimateDiv = withScrollAnimation("div");
-  return ( <AnimateDiv>
-    <div className={styles.customers}>
-     
+  return (
+    <AnimateDiv>
+      <div className={styles.customers}>
         <Title
           title="Empresas que confían en nosotros "
           color="#03495C"
           size="large"
         />
-      
+
         <div className={styles.rowOne}>
           <Logo
             img="/img/customers/ripley.png"
@@ -51,7 +51,7 @@ const Customers = () => {
             thirdImgWidth="282px"
           />
         </div>
-     
+
         <div className={styles.rowTwo}>
           <Logo
             img="/img/customers/scotiabank.png"
@@ -86,7 +86,7 @@ const Customers = () => {
             thirdImgWidth="282px"
           />
         </div>
-    
+
         <div className={styles.rowThree}>
           <Logo
             img="/img/customers/multihogar.png"
@@ -121,8 +121,7 @@ const Customers = () => {
             thirdImgWidth="200px"
           />
         </div>
-      
-    </div>
+      </div>
     </AnimateDiv>
   );
 };

@@ -56,20 +56,28 @@ const Menu = () => {
           color={isMobileMenuOpen ? "#000000" : "#ffffff"}
         />
       </div>
-      <ul className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}>
+      <ul
+        className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}
+      >
         <li>
           <a onClick={(e) => handleLinkClick("novedades", e)} href="#novedades">
             Novedades
           </a>
         </li>
         <li>
-          <a onClick={(e) => handleLinkClick("servicios", e)} href="#servicios">Servicios</a>
+          <a onClick={(e) => handleLinkClick("servicios", e)} href="#servicios">
+            Servicios
+          </a>
         </li>
         <li>
-          <a onClick={(e) => handleLinkClick("sobre", e)} href="#sobre">Sobre Nosotros</a>
+          <a onClick={(e) => handleLinkClick("sobre", e)} href="#sobre">
+            Sobre Nosotros
+          </a>
         </li>
         <li>
-          <a onClick={(e) => handleLinkClick("ubicacion", e)} href="#ubicacion">Ubicación</a>
+          <a onClick={(e) => handleLinkClick("ubicacion", e)} href="#ubicacion">
+            Ubicación
+          </a>
         </li>
         <li>
           <a onClick={openContactForm}>Contacto</a>

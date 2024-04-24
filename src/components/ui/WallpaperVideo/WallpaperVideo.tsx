@@ -43,4 +43,4 @@ const WallpaperVideo2 = ({ backgroundVideo, width, height, children }: any) => {
   );
 };
 
-export  {WallpaperVideo, WallpaperVideo2};
+export { WallpaperVideo, WallpaperVideo2 };

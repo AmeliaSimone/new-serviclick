@@ -2,7 +2,10 @@ import React from "react";
 
 import styles from "./Message.module.scss";
 
+import withScrollAnimation from "@/components/ui/Framer";
+
 const Message = () => {
+  const AnimateDiv = withScrollAnimation("div");
   return (
     <div className={styles.message}>
       <p>

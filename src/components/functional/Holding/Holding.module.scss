@@ -5,56 +5,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin:  150px 60px;
+  margin: 150px 60px;
   width: auto;
- 
+
   @include media-xl() {
-    margin:  150px 60px;
+    margin: 150px 60px;
   }
   @include media-lg() {
-    margin: 80px 20px ;
+    margin: 80px 20px;
   }
 
-  .line{
+  .line {
     padding: 20px;
-    border: solid 4px #03495C;
+    border: solid 4px #03495c;
     border-radius: 20px;
     position: relative;
     width: 100%;
   }
 
-  .rowOne{
+  .rowOne {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 
     @include media-md() {
-      
     }
+  }
 
-}
+  .rowTwo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
 
-.rowTwo{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
- 
-}
-
-.rowThree{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-    img{
-        padding: 10px;
+  .rowThree {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    img {
+      padding: 10px;
     }
-  
-}
-
+  }
 }

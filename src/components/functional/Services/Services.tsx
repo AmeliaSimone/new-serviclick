@@ -11,7 +11,7 @@ const Services = () => {
   const AnimateDiv = withScrollAnimation("div");
   return (
     <motion.div
-    id="servicios"
+      id="servicios"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -31,7 +31,7 @@ const Services = () => {
         />{" "}
       </AnimateDiv>
       <AnimateDiv>
-      <CardServices />
+        <CardServices />
       </AnimateDiv>
     </motion.div>
   );

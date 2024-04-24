@@ -1,36 +1,37 @@
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import styles from './Score.module.scss'; 
-import CardScore from '@/components/ui/CardScore';
-import withScrollAnimation from "@/components/ui/Framer";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import styles from "./Score.module.scss";
+import CardScore from "@/components/ui/CardScore";
 
 interface IScoreProps {
-  content: { title: number; text: string; duration: number; unitTextLeft?: string; unitTextRight?: string; }[];
+  content: {
+    title: number;
+    text: string;
+    duration: number;
+    unitTextLeft?: string;
+    unitTextRight?: string;
+  }[];
 }
 
 const Score: React.FC<IScoreProps> = ({ content }) => {
- 
-  
   const controls = useAnimation();
 
- 
   useEffect(() => {
     controls.start({
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
-        delay: 0.2 
-      }
+        delay: 0.2,
+      },
     });
   }, [controls]);
 
   return (
-   
     <motion.div
       className={styles.background}
-      initial={{ opacity: 0, y: 50 }} 
-      animate={controls} 
+      initial={{ opacity: 0, y: 50 }}
+      animate={controls}
     >
       <div className={styles.score}>
         {content &&
@@ -46,7 +47,6 @@ const Score: React.FC<IScoreProps> = ({ content }) => {
           ))}
       </div>
     </motion.div>
-  
   );
 };
 

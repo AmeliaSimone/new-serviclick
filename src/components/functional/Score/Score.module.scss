@@ -1,10 +1,8 @@
-
 @import "../../../styles/mixins.scss";
-
 
 .score {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   position: absolute;
@@ -15,7 +13,7 @@
   max-width: 80%;
   transform: translate(-50%, -30%);
   background-color: #f3f4f6;
-  padding: 20px 40px ; 
+  padding: 20px 40px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 
@@ -28,19 +26,15 @@
   }
 }
 
-
 .score > * {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
-
 
 .score > *:last-child {
-  margin-right: 0; 
+  margin-right: 0;
 }
-
 
 .background {
   width: 100vw;
   background-color: rgba(175, 175, 175, 0.288);
-
 }

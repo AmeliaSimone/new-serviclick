@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Footer.module.scss";
-import { Text, TextStart } from "@/components/ui/Text";
+
 import Logo from "@/components/ui/Logo";
 import Title from "@/components/ui/Title";
 

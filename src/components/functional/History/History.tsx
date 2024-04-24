@@ -1,9 +1,12 @@
 import React from "react";
+
 import styles from "./History.module.scss";
+
 import CardHistory from "@/components/ui/CardHistory";
 import Title from "@/components/ui/Title";
 import Logo from "@/components/ui/Logo";
 import { Text, TextStart } from "@/components/ui/Text/Text";
+
 import withScrollAnimation from "@/components/ui/Framer";
 
 const History = () => {
@@ -106,41 +109,43 @@ const History = () => {
       </div>
 
       <div className={styles.textcontainer}>
-      <AnimateDiv>
-        <Title
-          title="¿Tienes dificultades para recaudar desde tus clientes?"
-          color="#03495C"
-          size="large"
-        /></AnimateDiv>
         <AnimateDiv>
-        <div className={styles.content}>
-          <Logo
-            img="/img/history/celu.png"
-            width="180px"
-            height="180px"
-            thirdImg="/img/history/celu.png"
-            thirdImgHeight="180px"
-            thirdImgWidth="180px"
+          <Title
+            title="¿Tienes dificultades para recaudar desde tus clientes?"
+            color="#03495C"
+            size="large"
           />
+        </AnimateDiv>
+        <AnimateDiv>
+          <div className={styles.content}>
+            <Logo
+              img="/img/history/celu.png"
+              width="180px"
+              height="180px"
+              thirdImg="/img/history/celu.png"
+              thirdImgHeight="180px"
+              thirdImgWidth="180px"
+            />
 
-          <div className={styles.text}>
-            <div className={styles.subtitle}>
-              <Title title="PLAR" color="#B4CD25" size="medium" />
-              <Title
-                title="Plataforma de recaudación recurrente"
-                color="#03495C"
-                size="medium"
-              />
-            </div>
-            <div className={styles.paragraph}>
-              <TextStart
-                color=""
-                fontSize="20px"
-                text="¡No te preocupes!, nosotros contamos con una plataforma que puede realizar cargos recurrentes a tus clientes, en la periodicidad que necesites, en el tipo de moneda que más te convenga (pesos, UF) y que luego de un par de clics de configuración, llegue el dinero mes a mes a tu cuenta, con cualquier medio de pago electrónico (débito, crédito, prepago) que tenga tu cliente."
-              />
+            <div className={styles.text}>
+              <div className={styles.subtitle}>
+                <Title title="PLAR" color="#B4CD25" size="medium" />
+                <Title
+                  title="Plataforma de recaudación recurrente"
+                  color="#03495C"
+                  size="medium"
+                />
+              </div>
+              <div className={styles.paragraph}>
+                <TextStart
+                  color=""
+                  fontSize="20px"
+                  text="¡No te preocupes!, nosotros contamos con una plataforma que puede realizar cargos recurrentes a tus clientes, en la periodicidad que necesites, en el tipo de moneda que más te convenga (pesos, UF) y que luego de un par de clics de configuración, llegue el dinero mes a mes a tu cuenta, con cualquier medio de pago electrónico (débito, crédito, prepago) que tenga tu cliente."
+                />
+              </div>
             </div>
           </div>
-        </div></AnimateDiv>
+        </AnimateDiv>
       </div>
     </div>
   );

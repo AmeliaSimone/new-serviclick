@@ -29,7 +29,12 @@ const CardHistory: React.FC<ICardHistory> = ({
     >
       <div className={styles.content}>
         {isHovered ? (
-          <div className={`${styles.backContent} ${styles.backgroundColor}`} style={{ backgroundColor: backgroundColorBack }}>{childrenBack}</div>
+          <div
+            className={`${styles.backContent} ${styles.backgroundColor}`}
+            style={{ backgroundColor: backgroundColorBack }}
+          >
+            {childrenBack}
+          </div>
         ) : (
           childrenFront
         )}
