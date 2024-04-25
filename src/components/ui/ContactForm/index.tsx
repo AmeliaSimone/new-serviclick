@@ -1,3 +1,3 @@
 import ContactForm from "./ContactForm";
 
-export defContactForm
+export default ContactForm;

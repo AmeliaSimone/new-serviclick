@@ -1,3 +1,3 @@
-import Wallpaper from "./WallpaperVideo";
+import {WallpaperVideo, WallpaperVideo2} from "./WallpaperVideo";
 
-export default Wallpaper;
+export  {WallpaperVideo, WallpaperVideo2};
