@@ -7,13 +7,12 @@
   align-items: center;
   margin: 150px 60px;
   width: auto;
+  position: relative;
 
-  @include media-xl() {
-    margin: 150px 60px;
-  }
-  @include media-lg() {
+  @include media-md() {
     margin: 80px 20px;
   }
+  
 
   .line {
     padding: 20px;

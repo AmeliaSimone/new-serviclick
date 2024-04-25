@@ -1,3 +1,3 @@
-import Wallpaper from "./Wallpaper"
+import {Wallpaper, WallpaperLg} from "./Wallpaper"
 
 export default Wallpaper;

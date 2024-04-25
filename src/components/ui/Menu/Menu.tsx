@@ -3,15 +3,19 @@ import styles from "./Menu.module.scss";
 import Icon from "../Icon";
 import ContactForm from "../ContactForm/ContactForm";
 
+import withScrollAnimation from "@/components/ui/Framer";
+
+
+
 const Menu = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
 
   const handleResize = () => {
     if (window.innerWidth <= 768) {
-      setMobileMenuOpen(true);
+     // setMobileMenuOpen(true);
     } else {
-      setMobileMenuOpen(false);
+      //setMobileMenuOpen(false);
     }
   };
 
@@ -47,8 +51,10 @@ const Menu = () => {
   const closeContactForm = () => {
     setShowContactForm(false);
   };
-
+  const AnimateDiv = withScrollAnimation("div");
+  
   return (
+   
     <div className={styles.menu}>
       <div className={styles.mobileMenuIcon} onClick={toggleMobileMenu}>
         <Icon
@@ -56,6 +62,7 @@ const Menu = () => {
           color={isMobileMenuOpen ? "#000000" : "#ffffff"}
         />
       </div>
+      <AnimateDiv>
       <ul
         className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}
       >
@@ -87,7 +94,7 @@ const Menu = () => {
             </div>
           )}
         </li>
-      </ul>
+      </ul></AnimateDiv>
     </div>
   );
 };

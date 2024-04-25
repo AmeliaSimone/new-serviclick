@@ -23,5 +23,21 @@ const Wallpaper = ({ img, width, height, children }: IWallpaper) => {
     </div>
   );
 };
+const WallpaperLg = ({ img, width, height, children }: IWallpaper) => {
+  return (
+    <div className={styles.wallpaperlg}>
+      <img
+        className={styles.img}
+        src={`${img}`}
+        alt=""
+        style={{
+          width: "100%",
+          height: `calc(100vw * ${height} / ${width})`,
+        }}
+      />
+      {children}
+    </div>
+  );
+};
 
-export default Wallpaper;
+export {Wallpaper, WallpaperLg};

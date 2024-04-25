@@ -1,15 +1,22 @@
 import React from "react";
 
 import styles from "./AboutUs.module.scss";
+
 import CardAboutUs from "@/components/ui/CardAboutUs";
 import Title from "@/components/ui/Title";
 
+
+
 import withScrollAnimation from "@/components/ui/Framer";
+
+
 
 const AboutUs = () => {
   const AnimateDiv = withScrollAnimation("div");
   return (
-    <div className={styles.aboutus} id="sobre">
+   
+    <div className={styles.aboutus}   id="sobre">
+
       <AnimateDiv>
         <Title title="Quienes somos" size="medium" color="white" />
       </AnimateDiv>
@@ -42,7 +49,9 @@ const AboutUs = () => {
           />
         </AnimateDiv>
       </div>
+      
     </div>
+   
   );
 };
 

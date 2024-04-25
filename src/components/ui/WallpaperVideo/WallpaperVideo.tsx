@@ -32,7 +32,7 @@ const WallpaperVideo2 = ({ backgroundVideo, width, height, children }: any) => {
         muted
         style={{
           width: "100%",
-          height: `calc(100vw * ${height} / ${width})`,
+          height: `100%`,
           objectFit: "cover",
         }}
       >

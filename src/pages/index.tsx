@@ -25,6 +25,9 @@ import {
 
 import withScrollAnimation from "@/components/ui/Framer";
 
+
+
+
 export default function Home() {
   const videoPath = "/img/aboutus/video.mp4";
   const AnimateDiv = withScrollAnimation("div");
@@ -74,7 +77,7 @@ export default function Home() {
           <About />
           <Services />
         </Wallpaper>
-        <WallpaperVideo2 backgroundVideo={videoPath} width={1620} height={400}>
+        <WallpaperVideo2 backgroundVideo={videoPath} width={1620} height={520}>
           <AboutUs />
         </WallpaperVideo2>
         <AnimateDiv>
@@ -92,11 +95,12 @@ export default function Home() {
         <Wallpaper img="/img/history/fondo.png" width="1297px" height="1440px">
           <History />
         </Wallpaper>
+        <AnimateDiv>
         <New
           img="/img/new/img1.png"
           img2="/img/new/img2.png"
           img3="/img/new/img3.png"
-        />
+        /></AnimateDiv>
         <Contact img="/img/contact/mapa.png" width="280px" height="240px" />
         <Footer />
       </main>
@@ -105,7 +109,6 @@ export default function Home() {
         href1="https://api.whatsapp.com/send/?phone=56939325099&text&type=phone_number&app_absent=0"
         img2="/img/floating/phone.png"
         href2="tel:6000860580"
-      />
-    </>
+      /></>
   );
 }

@@ -5,14 +5,20 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 40px;
-  height: auto;
   gap: 40px;
-  position: absolute;
+ margin-bottom: 40px;
+ width: auto;
+ height: auto;
+ 
+  
 
   @include media-lg() {
-    height: 100%;
+    background-image: url('/img/aboutus/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    gap: 20px;
+    padding: 20px;
   }
 }
 
@@ -22,10 +28,11 @@
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 40px;
+  position: relative; /* Cambiado de absolute a relative */
 
   @include media-lg() {
-    gap: 20px;
-    width: auto;
+    gap: 40px;
+    width: 100%;
   }
 }

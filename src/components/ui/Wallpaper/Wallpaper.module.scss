@@ -7,6 +7,20 @@
   flex-direction: column;
   background-size: cover;
 }
+
+.wallpaperlg {
+  display: none;
+
+  @include media-lg(){
+    display: block;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-size: cover;
+  }
+  
+}
 .img {
   position: absolute;
   top: 0;

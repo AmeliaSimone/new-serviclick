@@ -18,9 +18,12 @@ const Hero = () => {
 
   return (
     <WallpaperVideo backgroundVideo={videoPath} width={1620} height={600}>
-      <AnimateDiv>
+      
         <div className={styles.hero}>
+        
           <div className={styles.nav}>
+          
+            <div><AnimateDiv>
             <Logo
               width="214px"
               height="31px"
@@ -28,14 +31,15 @@ const Hero = () => {
               secondImg="/img/hero/logosm.png"
               secondImgWidth="42px"
               secondImgHeight="42px"
-            />
+            /></AnimateDiv></div>
+            
             <Menu />
           </div>
           <div className={styles.msg}>
             <Message />
           </div>
         </div>
-      </AnimateDiv>
+      
     </WallpaperVideo>
   );
 };
