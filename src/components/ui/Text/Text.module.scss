@@ -64,8 +64,8 @@
       padding: 10px;
     }
 
-    @include media-sm() {
-      font-size: 14px;
+    @include media-md() {
+      font-size: 12px;
       width: 100%;
       padding: 10px;
     }

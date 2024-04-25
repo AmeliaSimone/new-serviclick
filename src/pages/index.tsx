@@ -97,8 +97,8 @@ export default function Home() {
         </Wallpaper>
         <AnimateDiv>
         <New
-          img="/img/new/img1.png"
-          img2="/img/new/img2.png"
+          img="/img/new/img1.png" height="362px" width="273px"
+          img2="/img/new/img2.png" 
           img3="/img/new/img3.png"
         /></AnimateDiv>
         <Contact img="/img/contact/mapa.png" width="280px" height="240px" />

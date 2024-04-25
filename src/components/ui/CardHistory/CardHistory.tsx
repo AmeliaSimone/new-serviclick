@@ -4,6 +4,8 @@ import styles from "./CardHistory.module.scss";
 interface ICardHistory {
   backgroundImage: string;
   backgroundColorBack: string;
+  width: string;
+  height: string;
   childrenFront: React.ReactNode;
   childrenBack: React.ReactNode;
 }
@@ -11,6 +13,8 @@ interface ICardHistory {
 const CardHistory: React.FC<ICardHistory> = ({
   backgroundImage,
   backgroundColorBack,
+  width,
+  height,
   childrenFront,
   childrenBack,
 }) => {
@@ -23,7 +27,7 @@ const CardHistory: React.FC<ICardHistory> = ({
   return (
     <div
       className={styles.cardHistory}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(${backgroundImage})`, width:"100$", height:`calc(100% * ${height} / ${width})`, }}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover}
     >

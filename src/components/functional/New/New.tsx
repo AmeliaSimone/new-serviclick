@@ -10,8 +10,10 @@ interface INew {
   img: string;
   img2: string;
   img3: string;
+  height: string;
+  width: string;
 }
-const New = ({ img, img2, img3 }: INew) => {
+const New = ({ img, img2, img3, height, width }: INew) => {
   const AnimateDiv = withScrollAnimation("div");
   return (
     <div className={styles.new} id="novedades">
@@ -20,9 +22,34 @@ const New = ({ img, img2, img3 }: INew) => {
       </AnimateDiv>
 
       <div className={styles.imgContainer}>
-        <img src={`${img}`} className={styles.img} />
-        <img src={`${img2}`} className={styles.img} />
-        <img src={`${img3}`} className={styles.img} />
+        <div className={styles.img}>
+        <img
+          src={`${img}`}
+          style={{
+            width: "100%",
+            height: `calc(100% * ${height} / ${width})`,
+          }}
+        />
+        </div>
+        <div className={styles.img}>
+        <img
+          src={`${img2}`}
+          style={{
+            width: "100%",
+            height: `calc(100% * ${height} / ${width})`,
+          }}
+        />
+        </div>
+        <div className={styles.img}>
+        <img
+          src={`${img3}`}
+          style={{
+            width: "100%",
+            height: `calc(100% * ${height} / ${width})`,
+          }}
+        />
+        </div>
+       
       </div>
     </div>
   );

@@ -23,6 +23,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
+  height: auto;
   gap: 20px;
   padding: 20px;
 
@@ -31,9 +32,10 @@
     gap: 10px;
     padding: 10px;
 
-    img {
-      width: 362px;
-      height: 273px;
-    }
-  }
+  }   
+}
+.img{
+display: flex;
+justify-content: space-between;
+align-items: center;
 }

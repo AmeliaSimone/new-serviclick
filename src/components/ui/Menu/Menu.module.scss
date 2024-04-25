@@ -1,6 +1,9 @@
 @import "../../../styles/mixins.scss";
 
 .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 2;
 
@@ -29,25 +32,11 @@
       border: 2px solid #03495c;
       border-radius: 50px 4px;
       transform: translateX(-100%);
-      transition: transform 0.3s ease-in-out;
+      //transition: transform 0.3s ease-in-out;
 
       &.menuItemsOpen {
         transform: translateX(0%);
       }
-    }
-  }
-
-  .mobileMenuIcon {
-    display: none;
-
-    @include media-lg() {
-      display: block;
-      cursor: pointer;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 3;
-      color: #000000;
     }
   }
 
@@ -80,5 +69,16 @@
         }
       }
     }
+  }
+}
+.mobileMenuIcon {
+  display: none;
+
+  @include media-lg() {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
+    color: #000000;
   }
 }

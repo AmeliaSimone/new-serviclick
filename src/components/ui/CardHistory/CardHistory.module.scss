@@ -9,9 +9,9 @@
   perspective: 1000px;
   border-radius: 30px 4px;
 
-  @include media-lg() {
-    width: 250px;
-    height: 350px;
+  @include media-md() {
+    width: 200px;
+    height: 300px;
   }
 
   &.flipped {
@@ -52,7 +52,10 @@
     cursor: pointer;
 
     @include media-lg() {
-      padding: 10px;
+      padding: 25px;
+    }
+    @include media-lg() {
+      padding: 15px;
     }
   }
   .backgroundColor {

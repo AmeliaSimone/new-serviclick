@@ -56,45 +56,50 @@ const Menu = () => {
   return (
    
     <div className={styles.menu}>
+      <AnimateDiv>
       <div className={styles.mobileMenuIcon} onClick={toggleMobileMenu}>
         <Icon
           icon={isMobileMenuOpen ? "close" : "menu"}
           color={isMobileMenuOpen ? "#000000" : "#ffffff"}
         />
-      </div>
-      <AnimateDiv>
+      </div></AnimateDiv>
+      
       <ul
         className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}
-      >
+      ><AnimateDiv>
         <li>
           <a onClick={(e) => handleLinkClick("novedades", e)} href="#novedades">
             Novedades
           </a>
-        </li>
+        </li></AnimateDiv>
+        <AnimateDiv>
         <li>
           <a onClick={(e) => handleLinkClick("servicios", e)} href="#servicios">
             Servicios
           </a>
-        </li>
+        </li></AnimateDiv>
+        <AnimateDiv>
         <li>
           <a onClick={(e) => handleLinkClick("sobre", e)} href="#sobre">
             Sobre Nosotros
           </a>
-        </li>
+        </li></AnimateDiv>
+        <AnimateDiv>
         <li>
           <a onClick={(e) => handleLinkClick("ubicacion", e)} href="#ubicacion">
             Ubicación
           </a>
-        </li>
-        <li>
-          <a onClick={openContactForm}>Contacto</a>
+        </li></AnimateDiv>
+        
+        <li><AnimateDiv>
+          <a onClick={openContactForm}>Contacto</a></AnimateDiv>
           {showContactForm && (
             <div className={styles.contactForm}>
               <ContactForm onClose={closeContactForm} />
             </div>
           )}
         </li>
-      </ul></AnimateDiv>
+      </ul>
     </div>
   );
 };

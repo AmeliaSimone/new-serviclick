@@ -22,6 +22,8 @@ const History = () => {
         <AnimateDiv>
           <div className={styles.cards}>
             <CardHistory
+            width="250px"
+            height="350px"
               backgroundImage="/img/history/f.historia.png"
               backgroundColorBack=""
               childrenFront={
@@ -51,6 +53,8 @@ const History = () => {
         <AnimateDiv>
           <div className={styles.cards}>
             <CardHistory
+            width="250px"
+            height="350px"
               backgroundImage="/img/history/f.mision.png"
               backgroundColorBack=""
               childrenFront={
@@ -80,6 +84,8 @@ const History = () => {
         <AnimateDiv>
           <div className={styles.cards}>
             <CardHistory
+            width="250px"
+            height="250px"
               backgroundImage="/img/history/f.vision.png"
               backgroundColorBack="linear-gradient(to right, #ff0000, #ffff00, #00ff00)"
               childrenFront={
