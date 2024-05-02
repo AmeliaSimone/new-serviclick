@@ -23,12 +23,13 @@ const Services = () => {
           size="large"
           title="Soluciones para tus clientes"
         />
-        <TitleBackground
+        <a href="/servicios" target="_blank"><TitleBackground 
           color="white"
           fontSize=""
           backgroundColor="#03495C"
           title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
-        />{" "}
+        /></a>
+        
       </AnimateDiv>
       <AnimateDiv>
         <CardServices />

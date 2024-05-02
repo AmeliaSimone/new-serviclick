@@ -24,14 +24,15 @@ const Hero = () => {
           <div className={styles.nav}>
           
             <div><AnimateDiv>
-            <Logo
+              <a href="/"> <Logo 
               width="214px"
               height="31px"
               img="/img/hero/logo.png"
               secondImg="/img/hero/logosm.png"
               secondImgWidth="42px"
               secondImgHeight="42px"
-            /></AnimateDiv></div>
+            /></a>
+           </AnimateDiv></div>
             
             <Menu />
           </div>

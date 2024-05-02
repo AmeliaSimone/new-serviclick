@@ -1,0 +1,34 @@
+.layout{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 100%;
+}
+
+.title{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 13px;
+padding-top: 85px;
+
+width: 100%;
+}
+
+.line{
+width:40%;
+color: #03495C;
+border: 5px solid ;
+border-radius: 0 15px 15px 0;
+}
+
+.cards{
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+gap: 50px;
+padding: 100px 0px;
+}
