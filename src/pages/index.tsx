@@ -16,6 +16,7 @@ import New from "@/components/functional/New";
 
 import FloatingButtons from "@/components/ui/FloatingButtons";
 import Wallpaper from "@/components/ui/Wallpaper";
+
 import {
   WallpaperVideo,
   WallpaperVideo2,
@@ -44,7 +45,7 @@ export default function Home() {
         <link rel="icon" href="/img/hero/logocolor.png" />
       </Head>
       <main>
-       
+      
         <AnimateDiv>
           <Score
             content={[

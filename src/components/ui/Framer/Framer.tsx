@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 const withScrollAnimation = (WrappedComponent: any) => {
   const WithScrollAnimation = ({ className, children, ...props }: any) => {
+   
     const { ref, inView } = useInView({
       triggerOnce: true,
     });
