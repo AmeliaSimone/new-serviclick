@@ -29,10 +29,28 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 40px;
-  position: relative; /* Cambiado de absolute a relative */
+  position:a; 
 
   @include media-lg() {
     gap: 40px;
     width: 100%;
   }
+  @include media-sm() {
+    display: none;
+   }
+
 }
+.mobile{
+  display: none;
+  
+  @include media-sm() {
+     display: block;
+    }
+  }
+
+  .title{
+    display: block;
+    @include media-sm() {
+      display: none;
+     }
+  }

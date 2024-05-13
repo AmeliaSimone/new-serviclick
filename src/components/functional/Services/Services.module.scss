@@ -8,6 +8,10 @@
   gap: 50px;
   padding: 60px;
 
+  @include media-sm() {
+   
+  }
+
   a{
   text-decoration: none;
   }
@@ -30,4 +34,19 @@
     gap: 10px;
     padding: 20px;
   }
+}
+
+.mobile{
+display: none;
+
+@include media-sm() {
+   display: block;
+  }
+}
+.title{
+display: block;
+
+@include media-sm() {
+ display: none;
+ }
 }

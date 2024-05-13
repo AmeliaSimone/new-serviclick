@@ -3,6 +3,7 @@ import styles from "./Menu.module.scss";
 import Icon from "../Icon";
 import ContactForm from "../ContactForm/ContactForm";
 
+
 import withScrollAnimation from "@/components/ui/Framer";
 
 
@@ -63,7 +64,7 @@ const Menu = () => {
           color={isMobileMenuOpen ? "#000000" : "#ffffff"}
         />
       </div></AnimateDiv>
-      
+     
       <ul
         className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}
       ><AnimateDiv>

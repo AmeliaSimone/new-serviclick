@@ -14,7 +14,11 @@ const Message = () => {
         TE ACOMPAÑAMOS <br /> EN TU DESAFÍO{" "}
       </p>
       <div></div>
-    </div></AnimateDiv>
+    </div>
+    <div className={styles.mobile}>
+      <img src="/img/hero/logo.png" alt="" />
+    </div>
+    </AnimateDiv>
   );
 };
 

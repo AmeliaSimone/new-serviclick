@@ -30,6 +30,13 @@
   @include media-sm() {
     padding: 10px 20px;
   }
+
+  .logo{
+    display:block;
+    @include media-sm() {
+    visibility: hidden;
+    }
+  }
 }
 
 .msg {

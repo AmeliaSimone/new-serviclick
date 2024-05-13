@@ -10,7 +10,7 @@
   left: 50%;
   padding: 2vw;
   width: 90vw;
-  max-width: 80%;
+  max-width: 90%;
   transform: translate(-50%, -30%);
   background-color: #f3f4f6;
   padding: 20px 40px;
@@ -18,11 +18,11 @@
   border-radius: 20px;
 
   @include media-lg() {
-    display: none;
+    
   }
 
   @include media-sm() {
-    display: none;
+    padding: 10px;
   }
 }
 
