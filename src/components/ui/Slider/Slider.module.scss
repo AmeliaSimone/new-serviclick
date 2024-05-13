@@ -1,7 +1,7 @@
 /* components/Slider.module.css */
 .slider {
   overflow-x: auto;
-  white-space: nowrap;
+  //white-space: nowrap;
   -webkit-overflow-scrolling: touch; 
   scrollbar-width: none;
   -ms-overflow-style: none; 
@@ -21,15 +21,15 @@
 }
 
 .slide {
-  flex: 0 0 auto;
-  padding: 0 10px;
+  justify-content: center;
+  flex: 0 0 100%; 
+  padding: 0 10px; /* Mantener el espacio entre cada slide */
  
 }
 
 .slide img {
-  max-width: 100%;
-  height: auto;
-  display: block; 
+  width: 100%; /* Ajustar la imagen para que ocupe el 100% del ancho del slide */
+  height: auto; /* Mantener la proporción de la imagen */
 }
 
 @media screen and (min-width: 768px) {

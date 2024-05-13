@@ -8,21 +8,7 @@ import withScrollAnimation from "@/components/ui/Framer";
 
 import Slider from "@/components/ui/Slider/Slider";
 
-const images = [
-  "/img/customers/ripley.png",
-  "/img/customers/bci.png",
-  "/img/customers/consorcio.png",
-  "/img/customers/sura.png",
-  "/img/customers/scotiabank.png",
-  "/img/customers/cardif.png",
-  "/img/customers/coaniquem.png",
-  "/img/customers/prosegur.png",
-  "/img/customers/multihogar.png",
-  "/img/customers/heroes.png",
-  "/img/customers/vspt.png",
-  "/img/customers/hotel.png",
-  
-];
+
 
 const Customers = () => {
   const AnimateDiv = withScrollAnimation("div");
@@ -34,7 +20,20 @@ const Customers = () => {
       
       <div className={styles.customers}>
       <h2>Empresas que confían en nosotros </h2>
-<Slider images={images} />
+<Slider>
+  <img src="/img/customers/ripley.png" alt="" />
+  <img src="/img/customers/bci.png" alt="" />
+  <img src="/img/customers/consorcio.png" alt="" />
+  <img src="/img/customers/sura.png" alt="" />
+  <img src="/img/customers/scotiabank.png" alt="" />
+  <img src="/img/customers/cardif.png" alt="" />
+  <img src="/img/customers/coaniquem.png" alt="" />
+  <img src="/img/customers/prosegur.png" alt="" />
+  <img src="/img/customers/multihogar.png" alt="" />
+  <img src="/img/customers/heroes.png" alt="" />
+  <img src="/img/customers/vspt.png" alt="" />
+  <img src="/img/customers/hotel.png" alt="" />
+</Slider>
       </div>
       </AnimatedSlider>
     </AnimateDiv>

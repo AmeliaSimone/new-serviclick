@@ -6,6 +6,7 @@ import { TitleBackground } from "@/components/ui/TitleBackground/TitleBackground
 import CardServices from "@/components/ui/CardServices";
 import { motion, useScroll } from "framer-motion";
 import withScrollAnimation from "@/components/ui/Framer";
+import Slider from "@/components/ui/Slider/Slider";
 
 const Services = () => {
   const AnimateDiv = withScrollAnimation("div");
@@ -33,6 +34,17 @@ const Services = () => {
       </AnimateDiv>
       <AnimateDiv>
         <CardServices />
+        <div className={styles.mobile}>
+        <Slider>
+        <img src="/img/services/serv1.png" alt="" />
+        <img src="/img/services/serv2.png" alt="" />
+        <img src="/img/services/serv3.png" alt="" />
+        <img src="/img/services/serv4.png" alt="" />
+        </Slider>
+        </div>
+        
+        
+        
       </AnimateDiv>
     </motion.div>
   );

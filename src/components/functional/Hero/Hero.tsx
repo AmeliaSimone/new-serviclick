@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 import styles from "./Hero.module.scss";
 
 import Logo from "@/components/ui/Logo";
@@ -24,14 +24,14 @@ const Hero = () => {
           <div className={styles.nav}>
           
             <div><AnimateDiv>
-              <a href="/"> <Logo 
+              <Link href="/"> <Logo 
               width="214px"
               height="31px"
               img="/img/hero/logo.png"
               secondImg="/img/hero/logosm.png"
               secondImgWidth="42px"
               secondImgHeight="42px"
-            /></a>
+            /></Link>
            </AnimateDiv></div>
             
             <Menu />

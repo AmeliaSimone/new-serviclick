@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Menu.module.scss";
 import Icon from "../Icon";
 import ContactForm from "../ContactForm/ContactForm";
+import Search from "../Search/Search";
 
 import withScrollAnimation from "@/components/ui/Framer";
 
@@ -63,7 +64,7 @@ const Menu = () => {
           color={isMobileMenuOpen ? "#000000" : "#ffffff"}
         />
       </div></AnimateDiv>
-      
+      <Search />
       <ul
         className={isMobileMenuOpen ? styles.menuItemsOpen : styles.menuItems}
       ><AnimateDiv>

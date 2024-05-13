@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/TitleBackground";
 
 import withScrollAnimation from "@/components/ui/Framer";
+import Slider from "@/components/ui/Slider/Slider";
 
 
 

@@ -9,6 +9,8 @@ import { Text, TextStart } from "@/components/ui/Text/Text";
 
 import withScrollAnimation from "@/components/ui/Framer";
 
+import Slider from "@/components/ui/Slider/Slider";
+
 const History = () => {
   const AnimateDiv = withScrollAnimation("div");
   return (
@@ -19,6 +21,10 @@ const History = () => {
         </div>
       </AnimateDiv>
       <div className={styles.cardContainer}>
+        
+        <Slider>
+          
+        
         <AnimateDiv>
           <div className={styles.cards}>
             <CardHistory
@@ -111,7 +117,7 @@ const History = () => {
               }
             />
           </div>
-        </AnimateDiv>
+        </AnimateDiv></Slider>
       </div>
 
       <div className={styles.textcontainer}>

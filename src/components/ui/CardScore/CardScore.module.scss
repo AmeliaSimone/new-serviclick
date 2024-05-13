@@ -6,19 +6,24 @@
   justify-content: center;
   padding: 10px;
 
+  @include media-md(){
+    padding: 5px;
+  }
+
   .cardTitle {
     font-size: 36px;
     font-weight: 500;
     color: #03495c;
 
     @include media-xl() {
-      font-size: 34px;
+      font-size: 30px;
     }
     @include media-lg() {
-      font-size: 32px;
+      font-size: 20px;
     }
     @include media-md() {
-      font-size: 30px;
+      font-size: 16px;
+      
     }
   }
 
@@ -32,10 +37,12 @@
       font-size: 18px;
     }
     @include media-lg() {
-      font-size: 16px;
+      font-size: 12px;
     }
     @include media-md() {
-      font-size: 14px;
+      font-size: 8px;
+      flex-wrap: wrap;
+      width: 60px;
     }
   }
 }
