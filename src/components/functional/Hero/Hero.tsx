@@ -23,7 +23,11 @@ const Hero = () => {
         
           <div className={styles.nav}>
           
-            <div className={styles.logo}><AnimateDiv>
+
+            <div className={styles.logo}>
+
+            <div><AnimateDiv>
+
               <Link href="/"> <Logo 
               width="214px"
               height="31px"
@@ -40,7 +44,7 @@ const Hero = () => {
             <Message />
           </div>
         </div>
-      
+        </div>
     </WallpaperVideo>
   );
 };

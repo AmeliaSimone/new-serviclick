@@ -24,32 +24,32 @@ const Services = () => {
           size="large"
           title="Soluciones para tus clientes"
         />
-        <a href="/servicios" className={styles.title} target="_blank"><TitleBackground 
+        <a href="/servicios" className={styles.title} target="_blank"><TitleBackground
           color="white"
           fontSize=""
           backgroundColor="#03495C"
           title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
         /></a>
-        
+
       </AnimateDiv>
       <AnimateDiv>
         <CardServices />
         <div className={styles.mobile}>
-        <Slider>
-        <img src="/img/services/serv1.png" alt="" />
-        <img src="/img/services/serv2.png" alt="" />
-        <img src="/img/services/serv3.png" alt="" />
-        <img src="/img/services/serv4.png" alt="" />
-        </Slider>
-        <a href="/servicios" target="_blank"><TitleBackground 
-          color="white"
-          fontSize=""
-          backgroundColor="#03495C"
-          title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
-        /></a>
+          <Slider>
+            <img src="/img/services/serv1.png" alt="" />
+            <img src="/img/services/serv2.png" alt="" />
+            <img src="/img/services/serv3.png" alt="" />
+            <img src="/img/services/serv4.png" alt="" />
+          </Slider>
+
+          <a href="/servicios" target="_blank"><TitleBackground
+            color="white"
+            fontSize=""
+            backgroundColor="#03495C"
+            title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
+          /></a>
         </div>
-     
-        
+
       </AnimateDiv>
     </motion.div>
   );

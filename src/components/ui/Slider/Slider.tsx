@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import styles from "./Slider.module.scss";
 
 interface SliderProps {
+
   children: React.ReactNode; 
 }
 
@@ -11,7 +12,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   if (!isMobile) {
-    
+
     return <>{children}</>;
   }
 
