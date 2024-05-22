@@ -4,7 +4,7 @@ import styles from "./AboutUs.module.scss";
 
 import CardAboutUs from "@/components/ui/CardAboutUs";
 import Title from "@/components/ui/Title";
-import Slider from "@/components/ui/Slider/Slider";
+import Slider2 from "@/components/ui/Slider/Slider2";
 
 
 
@@ -18,8 +18,11 @@ const AboutUs = () => {
 
     <div className={styles.aboutus} id="sobre">
       <div className={styles.mobile}>
-        <Slider>
-          <Title title="Quienes somos" size="medium" color="white" />
+      
+        <Slider2>
+        <div className={styles.title}>
+        <Title title="Quienes somos" size="medium" color="white" />
+        </div>
           <CardAboutUs
             img="/img/aboutus/carlos.png"
             title="Carlos Molina "
@@ -41,12 +44,9 @@ const AboutUs = () => {
             width="150px"
             height="150px"
           />
-        </Slider>
+        </Slider2>
       </div>
       <AnimateDiv>
-        <div className={styles.title}>
-        <Title title="Quienes somos" size="medium" color="white" />
-        </div>
        
       </AnimateDiv>
       <div className={styles.cards}>

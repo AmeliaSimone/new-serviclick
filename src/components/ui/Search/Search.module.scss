@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .searchContainer {
-    display: flex;
-    align-items: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   
-  .searchInput {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 8px;
-  }
-  
-  .searchIcon {
-    color: #333;
-    cursor: pointer;
-  }
-  
+}
+
+.searchBar {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  z-index: 20;
+}

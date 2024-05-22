@@ -1,12 +1,14 @@
 import React from "react";
-
+import ImgServices from "@/components/ui/ImgServices/ImgServices";
 import styles from "./Services.module.scss";
 import Title from "@/components/ui/Title";
 import { TitleBackground } from "@/components/ui/TitleBackground/TitleBackground";
 import CardServices from "@/components/ui/CardServices";
 import { motion, useScroll } from "framer-motion";
 import withScrollAnimation from "@/components/ui/Framer";
-import Slider from "@/components/ui/Slider/Slider";
+import Slider2 from "@/components/ui/Slider/Slider2";
+import Link from "next/link";
+
 
 const Services = () => {
   const AnimateDiv = withScrollAnimation("div");
@@ -19,39 +21,99 @@ const Services = () => {
       className={styles.services}
     >
       <AnimateDiv>
-        <Title
+      <Title
           color="#03495c"
           size="large"
           title="Soluciones para tus clientes"
         />
-        <a href="/servicios" className={styles.title} target="_blank"><TitleBackground
+        <div className={styles.desktitle}>
+        <Link href="/servicios" className={styles.title} ><TitleBackground
           color="white"
           fontSize=""
           backgroundColor="#03495C"
           title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
-        /></a>
+        /></Link>
+        </div>
+       
 
       </AnimateDiv>
       <AnimateDiv>
-        <CardServices />
-        <div className={styles.mobile}>
-          <Slider>
-            <img src="/img/services/serv1.png" alt="" />
-            <img src="/img/services/serv2.png" alt="" />
-            <img src="/img/services/serv3.png" alt="" />
-            <img src="/img/services/serv4.png" alt="" />
-          </Slider>
-
-          <a href="/servicios" target="_blank"><TitleBackground
-            color="white"
-            fontSize=""
-            backgroundColor="#03495C"
-            title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
-          /></a>
+        <div className={styles.desktop}>
+          <CardServices />
         </div>
 
       </AnimateDiv>
+
+      <div className={styles.imgContainer}>
+        <Slider2>
+          <ImgServices
+            imageUrl="/img/services/serv1.png"
+            buttonText="Ver más"
+          >
+            <h2>Puedes encontrar beneficios para tus clientes en:</h2>
+            <ul>
+              <li>Atención Ambulatoria</li>
+              <li>Atención de Urgencias </li>
+              <li>Atención de Especialista</li>
+              <li>Telemedicina</li>
+              <li>Descuento en farmacias </li>
+              <li>Exámenes y mucho más</li>
+            </ul>
+          </ImgServices>
+          <ImgServices
+            imageUrl="/img/services/serv2.png"
+            buttonText="Ver más"
+          >
+            <h2>Puedes encontrar beneficios para tus clientes en:</h2>
+            <ul>
+              <li>Servicios de Plomería</li>
+              <li>Servicios de Cerrajería</li>
+              <li>Servicios de Vidriería</li>
+              <li>Servicios de Electricista</li>
+              <li>Servicios de PinturaServicios de Vidriería</li>
+              <li>Instalaciones, perforaciones y mucho más</li>
+            </ul>
+          </ImgServices>
+          <ImgServices
+            imageUrl="/img/services/serv3.png"
+            buttonText="Ver más"
+          >
+            <h2>Puedes encontrar beneficios para tus clientes en:</h2>
+            <ul>
+              <li>Atención Urgencia Veterinaria </li>
+              <li>Atención Consulta Veterinaria</li>
+              <li>Vacuna Antirrábica</li>
+              <li>Asistencia Legal Telefónica </li>
+              <li>Descuentos en Farmacias y mucho más </li>
+            </ul>
+          </ImgServices>
+          <ImgServices
+            imageUrl="/img/services/serv4.png"
+            buttonText="Ver más"
+          >
+            <h2>Puedes encontrar beneficios para tus clientes en:</h2>
+            <ul>
+              <li>Protección para neumáticos / amortiguadores</li>
+              <li>Cerrajería vehícular</li>
+              <li>Protección Insignia o Emblema</li>
+              <li>Urgencia médica por accidente en bicicleta</li>
+              <li>Asistencia Legal Telefónica</li>
+              <li>Descuentos en farmacias y mucho más</li>
+            </ul>
+          </ImgServices>
+
+        </Slider2>
+
+        <Link href="/servicios"><TitleBackground
+          color="white"
+          fontSize=""
+          backgroundColor="#03495C"
+          title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
+        /></Link>
+      </div>
     </motion.div>
+
+
   );
 };
 

@@ -8,7 +8,7 @@
   height: 300px;
   width: 280px;
   padding: 40px 75px 40px 75px;
-  border: solid 1px #b4cd25;
+  border: solid 2px #b4cd25;
   border-radius: 30px 4px 30px 4px;
   gap: 5px;
 
@@ -17,12 +17,16 @@
     width: 250px;
     padding: 20px 55px;
   }
-
-  @include media-lg() {
-    height: 230px;
-    width: 200px;
-    padding: 20px 35px;
+  @include media-md() {
+   flex-direction: row;
+   height: 300px;
+   width: 400px;
   }
+  @include media-sm() {
+    flex-direction: row;
+    height: 200px;
+    width: 300px;
+   }
  
 
   h2 {

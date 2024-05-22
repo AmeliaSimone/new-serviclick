@@ -47,9 +47,7 @@
     object-fit: cover;
     z-index: -1;
   
-    @include media-lg(){
-      display: none;
-    }
+   
   }
 }
 
