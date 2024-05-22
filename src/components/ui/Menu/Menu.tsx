@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
 import styles from './Menu.module.scss';
+
 import withScrollAnimation from "@/components/ui/Framer";
 import ContactForm from "../ContactForm/ContactForm";
 import { useRouter } from 'next/router';
@@ -57,7 +59,7 @@ const Menu: React.FC<MenuProps> = ({
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 768) { 
+            if (window.innerWidth > 768) {
                 setMobileMenuOpen(false);
             }
         };
@@ -65,7 +67,7 @@ const Menu: React.FC<MenuProps> = ({
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []); 
+    }, []);
 
     return (
         <div className={`${styles.menu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>

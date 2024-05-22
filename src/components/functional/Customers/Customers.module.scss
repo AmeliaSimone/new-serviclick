@@ -10,17 +10,17 @@
   background-color: #eeeeee;
   gap: 40px;
 
-  @include media-md(){
-  display: none;
+  @include media-md() {
+    display: none;
   }
 
-  h2{
-  font-size: 32px;
-   font-weight: 600;
-   color: #03495C;
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #03495C;
 
-   @include media-md(){
-  font-size: 22px;
-  }
+    @include media-md() {
+      font-size: 22px;
+    }
   }
 }

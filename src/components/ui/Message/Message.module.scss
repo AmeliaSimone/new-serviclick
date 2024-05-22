@@ -5,22 +5,25 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-    font-size: 48px;
-    font-weight: 300;
-    color: white;
-    @include media-xl() {
-      font-size: 38px;
-    }
-    @include media-lg() {
-      font-size: 28px;
-    }
-    @include media-md() {
-      font-size: 18px;
-    }
+  font-size: 48px;
+  font-weight: 300;
+  color: white;
 
-    @include media-sm() {
-      display: none;
-    }
+  @include media-xl() {
+    font-size: 38px;
+  }
+
+  @include media-lg() {
+    font-size: 28px;
+  }
+
+  @include media-md() {
+    font-size: 18px;
+  }
+
+  @include media-sm() {
+    display: none;
+  }
 }
 
 .message .line {
@@ -30,19 +33,24 @@
   @include media-xl() {
     width: 280px;
   }
+
   @include media-lg() {
     width: 210px;
   }
+
   @include media-md() {
     width: 140px;
   }
+
   @include media-sm() {
     display: none;
   }
 }
-.mobile{
-display: none;
-@include media-sm() {
-  display: block;
-}
+
+.mobile {
+  display: none;
+
+  @include media-sm() {
+    display: block;
+  }
 }

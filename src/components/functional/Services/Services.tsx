@@ -1,13 +1,15 @@
 import React from "react";
-import ImgServices from "@/components/ui/ImgServices/ImgServices";
+import Link from "next/link";
+
 import styles from "./Services.module.scss";
+
+import ImgServices from "@/components/ui/ImgServices/ImgServices";
 import Title from "@/components/ui/Title";
 import { TitleBackground } from "@/components/ui/TitleBackground/TitleBackground";
 import CardServices from "@/components/ui/CardServices";
 import { motion, useScroll } from "framer-motion";
 import withScrollAnimation from "@/components/ui/Framer";
-import Slider2 from "@/components/ui/Slider/Slider2";
-import Link from "next/link";
+import Slider from "@/components/ui/Slider/Slider";
 
 
 const Services = () => {
@@ -21,20 +23,20 @@ const Services = () => {
       className={styles.services}
     >
       <AnimateDiv>
-      <Title
+        <Title
           color="#03495c"
           size="large"
           title="Soluciones para tus clientes"
         />
         <div className={styles.desktitle}>
-        <Link href="/servicios" className={styles.title} ><TitleBackground
-          color="white"
-          fontSize=""
-          backgroundColor="#03495C"
-          title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
-        /></Link>
+          <Link href="/servicios" className={styles.title} ><TitleBackground
+            color="white"
+            fontSize=""
+            backgroundColor="#03495C"
+            title="ENCUENTRA NUESTROS PRODUCTOS AQUÍ"
+          /></Link>
         </div>
-       
+
 
       </AnimateDiv>
       <AnimateDiv>
@@ -45,7 +47,7 @@ const Services = () => {
       </AnimateDiv>
 
       <div className={styles.imgContainer}>
-        <Slider2>
+        <Slider>
           <ImgServices
             imageUrl="/img/services/serv1.png"
             buttonText="Ver más"
@@ -102,7 +104,7 @@ const Services = () => {
             </ul>
           </ImgServices>
 
-        </Slider2>
+        </Slider>
 
         <Link href="/servicios"><TitleBackground
           color="white"

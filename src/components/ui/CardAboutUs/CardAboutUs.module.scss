@@ -17,17 +17,19 @@
     width: 250px;
     padding: 20px 55px;
   }
+
   @include media-md() {
-   flex-direction: row;
-   height: 300px;
-   width: 400px;
+    flex-direction: row;
+    height: 300px;
+    width: 400px;
   }
+
   @include media-sm() {
     flex-direction: row;
     height: 200px;
     width: 300px;
-   }
- 
+  }
+
 
   h2 {
     font-size: 16px;
@@ -38,13 +40,16 @@
     @include media-lg() {
       font-size: 14px;
     }
+
     @include media-md() {
       font-size: 12px;
     }
+
     @include media-sm() {
       font-size: 10px;
     }
   }
+
   p {
     font-size: 14px;
     font-weight: 200;
@@ -54,9 +59,11 @@
     @include media-lg() {
       font-size: 12px;
     }
+
     @include media-md() {
       font-size: 10px;
     }
+
     @include media-sm() {
       font-size: 10px;
     }

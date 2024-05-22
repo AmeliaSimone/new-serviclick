@@ -54,10 +54,12 @@
     @include media-lg() {
       padding: 25px;
     }
+
     @include media-lg() {
       padding: 15px;
     }
   }
+
   .backgroundColor {
     background: linear-gradient(#03495c, #118bab);
     border-radius: 30px 4px;

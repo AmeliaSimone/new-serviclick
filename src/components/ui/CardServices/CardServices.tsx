@@ -79,9 +79,8 @@ const CardServices: React.FC = () => {
         {initialCards.map((card, index) => (
           <div
             key={index}
-            className={`${styles.card} ${
-              selectedCardIndex === index ? styles.selectedCard : ""
-            }`}
+            className={`${styles.card} ${selectedCardIndex === index ? styles.selectedCard : ""
+              }`}
             onMouseEnter={() => handleHover(index)}
             onMouseLeave={() => setSelectedCardIndex(0)}
           >

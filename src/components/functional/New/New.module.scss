@@ -9,10 +9,10 @@
   width: 100%;
   padding: 40px;
 
-  @include media-lg(){
-  height: auto;
-  justify-content: center;
-  padding: 20px;
+  @include media-lg() {
+    height: auto;
+    justify-content: center;
+    padding: 20px;
 
   }
 }
@@ -26,30 +26,32 @@
   height: auto;
   gap: 20px;
   padding: 20px;
- 
+
   @include media-lg() {
     justify-content: center;
     gap: 10px;
-   
 
-  }   
+
+  }
 }
 
-.desktop{
+.desktop {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+
   @include media-md() {
-   display: none;
+    display: none;
 
   }
 }
-.img{
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 100%;
+
+.img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 
 }

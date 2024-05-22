@@ -6,10 +6,8 @@ import CardHistory from "@/components/ui/CardHistory";
 import Title from "@/components/ui/Title";
 import Logo from "@/components/ui/Logo";
 import { Text, TextStart } from "@/components/ui/Text/Text";
-
 import withScrollAnimation from "@/components/ui/Framer";
-
-import Slider2 from "@/components/ui/Slider/Slider2";
+import Slider from "@/components/ui/Slider/Slider";
 
 const History = () => {
   const AnimateDiv = withScrollAnimation("div");
@@ -22,7 +20,7 @@ const History = () => {
       </AnimateDiv>
       <div className={styles.cardContainer}>
 
-        <Slider2>
+        <Slider>
 
 
           <AnimateDiv>
@@ -117,7 +115,7 @@ const History = () => {
                 }
               />
             </div>
-          </AnimateDiv></Slider2>
+          </AnimateDiv></Slider>
       </div>
 
       <div className={styles.textcontainer}>
